@@ -1,0 +1,146 @@
+@import url("https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,900");
+@use './base/colors';
+@use './components/header';
+@use './components/body';
+@use './components/footer';
+body {
+  font: 100% Helvitica, sans-serif; }
+
+#footer {
+  background-color: #32323b;
+  display: flex;
+  flex-direction: row;
+  color: white;
+  justify-content: left;
+  line-height: 1.5em;
+  text-align: left;
+  padding: 2em 1em 2em 1em; }
+
+ul.menu li {
+  display: inline;
+  line-height: 1em;
+  border-left: solid 1px #e5e6e7;
+  padding: 0 0 0 0.5em;
+  margin: 0 0 0 0.5em; }
+
+ul {
+  list-style-type: none; }
+
+ul.icons li {
+  display: inline; }
+
+.nav-tabs .nav-link.active {
+  background-color: red; }
+
+.nav-tabs .nav-link {
+  background-color: #9e162f; }
+
+/* carousel */
+#quote-carousel {
+  padding: 0 10px 30px 10px;
+  margin-top: 30px; }
+
+/* Control buttons  */
+#quote-carousel .carousel-control {
+  background: none;
+  color: #222;
+  font-size: 2.3em;
+  text-shadow: none;
+  margin-top: 30px; }
+
+/* Previous button  */
+#quote-carousel .carousel-control.left {
+  left: -12px; }
+
+/* Next button  */
+#quote-carousel .carousel-control.right {
+  right: -12px !important; }
+
+/* Changes the position of the indicators */
+#quote-carousel .carousel-indicators {
+  right: 50%;
+  top: auto;
+  bottom: 0px;
+  margin-right: -19px; }
+
+/* Changes the color of the indicators */
+#quote-carousel .carousel-indicators li {
+  background: #c0c0c0; }
+
+#quote-carousel .carousel-indicators .active {
+  background: #333333; }
+
+#quote-carousel img {
+  width: 250px;
+  height: 100px; }
+
+/* End carousel */
+.item blockquote {
+  border-left: none;
+  margin: 0; }
+
+.item blockquote img {
+  margin-bottom: 10px; }
+
+.item blockquote p:before {
+  content: "\f10d";
+  font-family: 'Fontawesome';
+  float: left;
+  margin-right: 10px; }
+
+/**
+  MEDIA QUERIES
+*/
+/* Small devices (tablets, 768px and up) */
+@media (min-width: 768px) {
+  #quote-carousel {
+    margin-bottom: 0;
+    padding: 0 40px 30px 40px; } }
+/* Small devices (tablets, up to 768px) */
+@media (max-width: 768px) {
+  /* Make the indicators larger for easier clicking with fingers/thumb on mobile */
+  #quote-carousel .carousel-indicators {
+    bottom: -20px !important; }
+
+  #quote-carousel .carousel-indicators li {
+    display: inline-block;
+    margin: 0px 5px;
+    width: 15px;
+    height: 15px; }
+
+  #quote-carousel .carousel-indicators li.active {
+    margin: 0px 5px;
+    width: 20px;
+    height: 20px; } }
+.speech-bubble {
+  position: relative;
+  background: #00aabb;
+  border-radius: .4em;
+  width: 50%;
+  left: 25%;
+  padding: 1rem; }
+
+.speech-bubble:after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  width: 0;
+  height: 0;
+  border: 25px solid transparent;
+  border-top-color: #00aabb;
+  border-bottom: 0;
+  border-left: 0;
+  margin-left: -12.5px;
+  margin-bottom: -25px; }
+
+#footer {
+  display: flex;
+  flex-direction: column;
+  padding: 1rem; }
+
+.nav-item {
+  align-self: center; }
+
+.footerlink {
+  color: lightgrey; }
