@@ -8,7 +8,9 @@
 $primary-font: Helvitica , sans-serif;
 $blue: #1a2d58;
 $red: #ad3c50;
-$darkred: #9e162f;
+$darkred: #9e162f; 
+$test: blue;
+$nav: rgb(56, 53, 53);
 
 
 body{
@@ -46,7 +48,7 @@ ul.menu li {
 
   //tabs background color
   .nav-tabs .nav-link.active {
-      background-color:red;
+      background-color:$nav;
   }
 
   .nav-tabs .nav-link {
