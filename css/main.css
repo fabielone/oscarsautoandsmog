@@ -1,4 +1,5 @@
 @import url("https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,900");
+@use './base/page';
 body {
   font: 100% Helvitica, sans-serif;
 }
