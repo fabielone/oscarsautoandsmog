@@ -1,5 +1,12 @@
 @import url("https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,900");
-@use './base/page';
+@media (min-width: 460px) {
+  .main-container {
+    padding-left: 10rem;
+    padding-right: 10rem;
+    
+  }
+}
+
 body {
   font: 100% Helvitica, sans-serif;
 }
