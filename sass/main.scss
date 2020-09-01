@@ -1,16 +1,13 @@
 
+@import './base/colors';
+@import './components/header';
 @import './base/page';
 
 @import url("https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,900");
 
 
 
-$primary-font: Helvitica , sans-serif;
-$blue: #1a2d58;
-$red: #ad3c50;
-$darkred: #9e162f; 
-$test: blue;
-$nav: rgb(56, 53, 53);
+
 
 
 body{
