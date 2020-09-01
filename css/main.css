@@ -5,12 +5,16 @@
 
 @media (min-width: 460px) {
   .main-container {
-    padding-left: 17rem;
-    padding-right: 17rem;
+    padding-left: 20%;
+    padding-right: 20%;
   }
   .couponimages {
     width: 10rem;
   }
+}
+
+.nav-item {
+  color: white !important;
 }
 
 body {
@@ -54,8 +58,9 @@ ul.icons li {
 
 /* carousel */
 #quote-carousel {
-  padding: 0 10px 30px 10px;
+  padding: 0px 10px 30px 10px;
   margin-top: 30px;
+  background-color: lightgray;
 }
 
 /* Control buttons  */
@@ -79,15 +84,17 @@ ul.icons li {
 
 /* Changes the position of the indicators */
 #quote-carousel .carousel-indicators {
-  right: 50%;
-  top: auto;
-  bottom: 0px;
-  margin-right: -19px;
+  /*none*/
 }
 
 /* Changes the color of the indicators */
 #quote-carousel .carousel-indicators li {
   background: #c0c0c0;
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
 }
 
 #quote-carousel .carousel-indicators .active {
@@ -182,5 +189,9 @@ ul.icons li {
 
 .footerlink {
   color: lightgrey;
+}
+
+.mainmodal {
+  z-index: 10000;
 }
 /*# sourceMappingURL=main.css.map */
