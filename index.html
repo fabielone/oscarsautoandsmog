@@ -21,6 +21,15 @@
     @import url("sass/main.scss.css");
   </style>
   <script src="jQueryAssets/jquery-1.11.1.min.js"></script>
+  <style>
+    /* Set the size of the div element that contains the map */
+    #map {
+      height: 400px;
+      /* The height is 400 pixels */
+      width: 100%;
+      /* The width is the width of the web page */
+    }
+  </style>
 </head>
 
 <body>
@@ -105,14 +114,14 @@
   <div class="container-fluid main-container">
     <div class="row" style="padding:1rem 0;">
 
-      <div class="col-sm-6 order-sm-2 justify-content-center align-content-center">
+      <div class="col-sm-6 order-sm-2 justify-content-center align-content-center" style="text-align:center;">
         <div class="align-content-center">
           <h5 class="text-center">Oscar's Complete Auto Care &amp; Smog Services</h5>
           <p class="text-center"><strong>1315 N. Mt.Vernon Ave..#B</strong><br>
             <strong> Colton, CA 92324</strong><br>
             <a href="https://g.page/oscars-auto-smog?share">Get Directions </a></p>
           <h3 class="text-center"><a href="tel:9093702817"><strong> (909) 370-2817&nbsp;</strong></a></h3>
-          <button type="button" class="btn btn-danger align-content-center">SCHEDULE AN<br>
+          <button type="button" class="btn btn-danger align-content-center" style="text-align: center;">SCHEDULE AN<br>
             APPOINTMENT
           </button>
           <p class="text-center"><strong>Hours</strong><br>Mon-Fri: 8:00am-5:00pm<br> Sat: 8:00am-2:00pm</p>
@@ -168,7 +177,33 @@
     </div>
   </div>
 
+
+
   <div class="container-fluid main-container">
+
+    <h3>Visit Us
+    </h3>
+    <!--The div element for the map -->
+    <div id="map"></div>
+    <script>
+      // Initialize and add the map
+      function initMap() {
+        // The location of Uluru
+        var uluru = { lat: -25.344, lng: 131.036 };
+        // The map, centered at Uluru
+        var map = new google.maps.Map(
+          document.getElementById('map'), { zoom: 4, center: uluru });
+        // The marker, positioned at Uluru
+        var marker = new google.maps.Marker({ position: uluru, map: map });
+      }
+    </script>
+    <!--Load the API from the specified URL
+    * The async attribute allows the browser to render the page while the API loads
+    * The key parameter will contain your own API key (which is not needed for this tutorial)
+    * The callback parameter executes the initMap() function
+    -->
+    <script defer src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&callback=initMap">
+    </script>
 
 
 
@@ -236,19 +271,124 @@
     <div class="container-fluid" style="margin-bottom:0">
       Featured Copuons and Offers
       <div class="row">
-        <div class="col-sm-4">
-          <a href="#">
-            <div class="card">
-              <div class="card-body">
-                <h5 class="card-title">Complete Auto Care&nbsp;</h5>
-                <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-                <a href="#" class="btn btn-primary">Go somewhere</a>
+        <div class="col-sm-12">
+
+          <div class="card">
+            <div class="card-body">
+              <div class="row">
+                <div class="col-sm-4"><a
+                    href="https://www.firestonecompleteautocare.com/offers/offer-detail/destination-20-08"
+                    target="_blank" class="site-offer-cta-button">
+                    <img
+                      src="https://file-optimizer.s3.amazonaws.com/firestone-https://www.firestonecompleteautocare.com/offer/destination-20-08.jpg?1598857961"
+                      alt="$40 Off Set of 4 Firestone Destination LE3 Tires" class="couponimages">
+                  </a></div>
+                <div class="col-sm-8">
+                  <div class="row">
+                    <div class="col-sm-12">
+                      <h5 class="card-title">Complete Auto Care&nbsp;</h5>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col-sm-12">
+                      <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col-sm-6"></div>
+                    <div class="col-sm-6"><a href="#" class="btn btn-primary">Go somewhere</a></div>
+                  </div>
+                </div>
               </div>
+
+
+
             </div>
+          </div>
           </a>
 
         </div>
-        <div class="col-sm-4">
+      </div>
+      <div class="row">
+        <div class="col-sm-12">
+
+          <div class="card">
+            <div class="card-body">
+              <div class="row">
+                <div class="col-sm-4"><a
+                    href="https://www.firestonecompleteautocare.com/offers/offer-detail/destination-20-08"
+                    target="_blank" class="site-offer-cta-button">
+                    <img
+                      src="https://file-optimizer.s3.amazonaws.com/firestone-https://www.firestonecompleteautocare.com/offer/destination-20-08.jpg?1598857961"
+                      alt="$40 Off Set of 4 Firestone Destination LE3 Tires" class="couponimages">
+                  </a></div>
+                <div class="col-sm-8">
+                  <div class="row">
+                    <div class="col-sm-12">
+                      <h5 class="card-title">Complete Auto Care&nbsp;</h5>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col-sm-12">
+                      <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col-sm-6"></div>
+                    <div class="col-sm-6"><a href="#" class="btn btn-primary">Go somewhere</a></div>
+                  </div>
+                </div>
+              </div>
+
+
+
+            </div>
+          </div>
+          </a>
+
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-sm-12">
+
+          <div class="card">
+            <div class="card-body">
+              <div class="row">
+                <div class="col-sm-4"><a
+                    href="https://www.firestonecompleteautocare.com/offers/offer-detail/destination-20-08"
+                    target="_blank" class="site-offer-cta-button">
+                    <img
+                      src="https://file-optimizer.s3.amazonaws.com/firestone-https://www.firestonecompleteautocare.com/offer/destination-20-08.jpg?1598857961"
+                      alt="$40 Off Set of 4 Firestone Destination LE3 Tires" class="couponimages">
+                  </a></div>
+                <div class="col-sm-8">
+                  <div class="row">
+                    <div class="col-sm-12">
+                      <h5 class="card-title">Complete Auto Care&nbsp;</h5>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col-sm-12">
+                      <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col-sm-6"></div>
+                    <div class="col-sm-6"><a href="#" class="btn btn-primary">Go somewhere</a></div>
+                  </div>
+                </div>
+              </div>
+
+
+
+            </div>
+          </div>
+          </a>
+
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-sm-12">
           <div class="card">
             <div class="card-body">
               <h5 class="card-title">Emission Repairs</h5>
@@ -257,7 +397,9 @@
             </div>
           </div>
         </div>
-        <div class="col-sm-4">
+      </div>
+      <div class="row">
+        <div class="col-sm-12">
           <div class="card">
             <div class="card-body">
               <h5 class="card-title">Computerized Diagnotics</h5>
@@ -267,6 +409,7 @@
           </div>
         </div>
       </div>
+
     </div>
 
 
@@ -283,6 +426,360 @@
 
     <div class="container-fluid" style="margin-bottom:0">
       Products and Services
+      <!-- new rows-->
+      <div class="row">
+        <div class="col-sm-12">
+
+          <div class="card">
+            <div class="card-body">
+              <div class="row">
+                <div class="col-sm-4"><a
+                    href="https://www.firestonecompleteautocare.com/offers/offer-detail/destination-20-08"
+                    target="_blank" class="site-offer-cta-button">
+                    <img
+                      src="https://file-optimizer.s3.amazonaws.com/firestone-https://www.firestonecompleteautocare.com/offer/destination-20-08.jpg?1598857961"
+                      alt="$40 Off Set of 4 Firestone Destination LE3 Tires" class="couponimages">
+                  </a></div>
+                <div class="col-sm-8">
+                  <div class="row">
+                    <div class="col-sm-12">
+                      <h5 class="card-title">Complete Auto Care&nbsp;</h5>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col-sm-12">
+                      <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col-sm-6"></div>
+                    <div class="col-sm-6"><a href="#" class="btn btn-primary">Go somewhere</a></div>
+                  </div>
+                </div>
+              </div>
+
+
+
+            </div>
+          </div>
+          </a>
+
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-sm-12">
+
+          <div class="card">
+            <div class="card-body">
+              <div class="row">
+                <div class="col-sm-4"><a
+                    href="https://www.firestonecompleteautocare.com/offers/offer-detail/destination-20-08"
+                    target="_blank" class="site-offer-cta-button">
+                    <img
+                      src="https://file-optimizer.s3.amazonaws.com/firestone-https://www.firestonecompleteautocare.com/offer/destination-20-08.jpg?1598857961"
+                      alt="$40 Off Set of 4 Firestone Destination LE3 Tires" class="couponimages">
+                  </a></div>
+                <div class="col-sm-8">
+                  <div class="row">
+                    <div class="col-sm-12">
+                      <h5 class="card-title">Complete Auto Care&nbsp;</h5>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col-sm-12">
+                      <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col-sm-6"></div>
+                    <div class="col-sm-6"><a href="#" class="btn btn-primary">Go somewhere</a></div>
+                  </div>
+                </div>
+              </div>
+
+
+
+            </div>
+          </div>
+          </a>
+
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-sm-12">
+
+          <div class="card">
+            <div class="card-body">
+              <div class="row">
+                <div class="col-sm-4"><a
+                    href="https://www.firestonecompleteautocare.com/offers/offer-detail/destination-20-08"
+                    target="_blank" class="site-offer-cta-button">
+                    <img
+                      src="https://file-optimizer.s3.amazonaws.com/firestone-https://www.firestonecompleteautocare.com/offer/destination-20-08.jpg?1598857961"
+                      alt="$40 Off Set of 4 Firestone Destination LE3 Tires" class="couponimages">
+                  </a></div>
+                <div class="col-sm-8">
+                  <div class="row">
+                    <div class="col-sm-12">
+                      <h5 class="card-title">Complete Auto Care&nbsp;</h5>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col-sm-12">
+                      <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col-sm-6"></div>
+                    <div class="col-sm-6"><a href="#" class="btn btn-primary">Go somewhere</a></div>
+                  </div>
+                </div>
+              </div>
+
+
+
+            </div>
+          </div>
+          </a>
+
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-sm-12">
+
+          <div class="card">
+            <div class="card-body">
+              <div class="row">
+                <div class="col-sm-4"><a
+                    href="https://www.firestonecompleteautocare.com/offers/offer-detail/destination-20-08"
+                    target="_blank" class="site-offer-cta-button">
+                    <img
+                      src="https://file-optimizer.s3.amazonaws.com/firestone-https://www.firestonecompleteautocare.com/offer/destination-20-08.jpg?1598857961"
+                      alt="$40 Off Set of 4 Firestone Destination LE3 Tires" class="couponimages">
+                  </a></div>
+                <div class="col-sm-8">
+                  <div class="row">
+                    <div class="col-sm-12">
+                      <h5 class="card-title">Complete Auto Care&nbsp;</h5>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col-sm-12">
+                      <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col-sm-6"></div>
+                    <div class="col-sm-6"><a href="#" class="btn btn-primary">Go somewhere</a></div>
+                  </div>
+                </div>
+              </div>
+
+
+
+            </div>
+          </div>
+          </a>
+
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-sm-12">
+
+          <div class="card">
+            <div class="card-body">
+              <div class="row">
+                <div class="col-sm-4"><a
+                    href="https://www.firestonecompleteautocare.com/offers/offer-detail/destination-20-08"
+                    target="_blank" class="site-offer-cta-button">
+                    <img
+                      src="https://file-optimizer.s3.amazonaws.com/firestone-https://www.firestonecompleteautocare.com/offer/destination-20-08.jpg?1598857961"
+                      alt="$40 Off Set of 4 Firestone Destination LE3 Tires" class="couponimages">
+                  </a></div>
+                <div class="col-sm-8">
+                  <div class="row">
+                    <div class="col-sm-12">
+                      <h5 class="card-title">Complete Auto Care&nbsp;</h5>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col-sm-12">
+                      <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col-sm-6"></div>
+                    <div class="col-sm-6"><a href="#" class="btn btn-primary">Go somewhere</a></div>
+                  </div>
+                </div>
+              </div>
+
+
+
+            </div>
+          </div>
+          </a>
+
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-sm-12">
+
+          <div class="card">
+            <div class="card-body">
+              <div class="row">
+                <div class="col-sm-4"><a
+                    href="https://www.firestonecompleteautocare.com/offers/offer-detail/destination-20-08"
+                    target="_blank" class="site-offer-cta-button">
+                    <img
+                      src="https://file-optimizer.s3.amazonaws.com/firestone-https://www.firestonecompleteautocare.com/offer/destination-20-08.jpg?1598857961"
+                      alt="$40 Off Set of 4 Firestone Destination LE3 Tires" class="couponimages">
+                  </a></div>
+                <div class="col-sm-8">
+                  <div class="row">
+                    <div class="col-sm-12">
+                      <h5 class="card-title">Complete Auto Care&nbsp;</h5>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col-sm-12">
+                      <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col-sm-6"></div>
+                    <div class="col-sm-6"><a href="#" class="btn btn-primary">Go somewhere</a></div>
+                  </div>
+                </div>
+              </div>
+
+
+
+            </div>
+          </div>
+          </a>
+
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-sm-12">
+
+          <div class="card">
+            <div class="card-body">
+              <div class="row">
+                <div class="col-sm-4"><a
+                    href="https://www.firestonecompleteautocare.com/offers/offer-detail/destination-20-08"
+                    target="_blank" class="site-offer-cta-button">
+                    <img
+                      src="https://file-optimizer.s3.amazonaws.com/firestone-https://www.firestonecompleteautocare.com/offer/destination-20-08.jpg?1598857961"
+                      alt="$40 Off Set of 4 Firestone Destination LE3 Tires" class="couponimages">
+                  </a></div>
+                <div class="col-sm-8">
+                  <div class="row">
+                    <div class="col-sm-12">
+                      <h5 class="card-title">Complete Auto Care&nbsp;</h5>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col-sm-12">
+                      <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col-sm-6"></div>
+                    <div class="col-sm-6"><a href="#" class="btn btn-primary">Go somewhere</a></div>
+                  </div>
+                </div>
+              </div>
+
+
+
+            </div>
+          </div>
+          </a>
+
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-sm-12">
+
+          <div class="card">
+            <div class="card-body">
+              <div class="row">
+                <div class="col-sm-4"><a
+                    href="https://www.firestonecompleteautocare.com/offers/offer-detail/destination-20-08"
+                    target="_blank" class="site-offer-cta-button">
+                    <img
+                      src="https://file-optimizer.s3.amazonaws.com/firestone-https://www.firestonecompleteautocare.com/offer/destination-20-08.jpg?1598857961"
+                      alt="$40 Off Set of 4 Firestone Destination LE3 Tires" class="couponimages">
+                  </a></div>
+                <div class="col-sm-8">
+                  <div class="row">
+                    <div class="col-sm-12">
+                      <h5 class="card-title">Complete Auto Care&nbsp;</h5>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col-sm-12">
+                      <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col-sm-6"></div>
+                    <div class="col-sm-6"><a href="#" class="btn btn-primary">Go somewhere</a></div>
+                  </div>
+                </div>
+              </div>
+
+
+
+            </div>
+          </div>
+          </a>
+
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-sm-12">
+
+          <div class="card">
+            <div class="card-body">
+              <div class="row">
+                <div class="col-sm-4"><a
+                    href="https://www.firestonecompleteautocare.com/offers/offer-detail/destination-20-08"
+                    target="_blank" class="site-offer-cta-button">
+                    <img
+                      src="https://file-optimizer.s3.amazonaws.com/firestone-https://www.firestonecompleteautocare.com/offer/destination-20-08.jpg?1598857961"
+                      alt="$40 Off Set of 4 Firestone Destination LE3 Tires" class="couponimages">
+                  </a></div>
+                <div class="col-sm-8">
+                  <div class="row">
+                    <div class="col-sm-12">
+                      <h5 class="card-title">Complete Auto Care&nbsp;</h5>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col-sm-12">
+                      <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col-sm-6"></div>
+                    <div class="col-sm-6"><a href="#" class="btn btn-primary">Go somewhere</a></div>
+                  </div>
+                </div>
+              </div>
+
+
+
+            </div>
+          </div>
+          </a>
+
+        </div>
+      </div>
+
+      <!-- old rows-->
       <div class="row">
         <div class="col-sm-4">
           <a href="#">
