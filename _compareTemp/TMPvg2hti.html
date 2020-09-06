@@ -19,13 +19,19 @@
   <link href="jQueryAssets/jquery.ui.theme.min.css" rel="stylesheet" type="text/css">
 
   <script src="jQueryAssets/jquery-1.11.1.min.js"></script>
-
+  <style>
+    /* Set the size of the div element that contains the map */
+    #map {
+      height: 400px;
+      /* The height is 400 pixels */
+      width: 100%;
+      /* The width is the width of the web page */
+    }
+  </style>
   <link href="./css/main.css" rel="stylesheet" type="text/css">
 </head>
 
 <body>
-
-
   <!-- Modal -->
   <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle"
     aria-hidden="true">
@@ -60,50 +66,50 @@
 
   </div>
 
-  <nav class="navbar sticky-top navbar-expand-md mainnav navbar-dark" style="padding:0;margin:0;">
+  <nav class="navbar sticky-top navbar-expand-md mainnav navbar-dark">
 
-    <a class="navbar-brand " href="#" style="margin:0;padding:0;"><img src="imgs/logo.png" alt="" width="200"></a>
+    <a class="navbar-brand " href="#"><img src="imgs/logo.png" alt="" width="200"></a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar"> <span
         class="navbar-toggler-icon"></span></button>
+    <div class="collapse navbar-collapse" id="collapsibleNavbar">
+      <ul class="navbar-nav ">
 
-    <ul class="navbar-nav nav-pills">
+        <li class="nav-item"> <a class="nav-link" href="#">Home&nbsp; </a></li>
+        <li class="nav-item"> <a class="nav-link" href="#">Complete<br>
+            Auto Care <br>
+          </a></li>
+        <li class="nav-item"> <a class="nav-link" href="#">A/C&nbsp;
+            Repair&nbsp;&nbsp;</a></li>
+        <li class="nav-item"> </li>
 
-      <li class="nav-item"> <a class="nav-link" href="#">Home&nbsp; </a></li>
-      <li class="nav-item"> <a class="nav-link" href="#">Complete<br>
-          Auto Care <br>
         </a></li>
-      <li class="nav-item"> <a class="nav-link" href="#">A/C&nbsp;
-          Repair&nbsp;&nbsp;</a></li>
-      <li class="nav-item"> </li>
+        <li class="nav-item"> </li>
 
-      </a></li>
-      <li class="nav-item"> </li>
+        <li class="nav-item"> <a class="nav-link" href="#">Smog Check</a></li>
 
-      <li class="nav-item"> <a class="nav-link" href="#">Smog Check</a></li>
+        <!-- Button trigger modal -->
+        <div>
 
-      <!-- Button trigger modal -->
-      <div>
+        </div>
+        <li class="nav-item ">
 
-      </div>
-      <li class="nav-item ">
-
-      </li>
+        </li>
 
 
-      <li class="nav-item "> </li>
+        <li class="nav-item "> </li>
 
 
 
-    </ul>
+      </ul>
 
-    <a class="nav-link fa fa-calendar ml-auto " href="#" data-toggle="modal" data-target="#exampleModalCenter"
-      style="color:white;">
-      Book Now!
-    </a>
-    <a class="nav-link" href="#" style="color:white;"> Call Now </a>
+      <a class="nav-link fa fa-calendar ml-auto " href="#" data-toggle="modal" data-target="#exampleModalCenter"
+        style="color:white;">
+        Book Now!
+      </a>
+      <a class="nav-link" href="#" style="color:white;"> Call Now </a>
 
 
-
+    </div>
   </nav>
 
   <ul class="nav justify-content-end" style="display:none;">
@@ -111,12 +117,6 @@
     <li class="nav-item"><a href="#" class="nav-link">Login</a></li>
     <li class="nav-item"><a href="#" class="nav-link">Register</a></li>
   </ul>
-
-  <!-- end of nav-->
-
-
-
-
 
 
   <div class="container-fluid main-container">
@@ -142,22 +142,21 @@
         <div class="container" style="padding:0;">
 
           <!-- Nav tabs -->
-          <ul class="nav nav-tabs" role="tablist" style="border:none;">
-            <li class="nav-item" style="width:33%">
-              <a class="nav-link text-white active" data-toggle="tab" style="border:none;" href=" #home">Auto <br>
+          <ul class="nav nav-tabs" role="tablist">
+            <li class="nav-item">
+              <a class="nav-link text-white active" data-toggle="tab" style="border:none;" href=" #home">Auto
                 Care&nbsp;</a>
             </li>
-            <li class="nav-item" style="width:33%">
-              <a class="nav-link text-white " data-toggle="tab" style="border:none;" href=" #menu1">A/C <br> Repair</a>
+            <li class="nav-item">
+              <a class="nav-link text-white " data-toggle="tab" style="border:none;" href=" #menu1">A/C Repair</a>
             </li>
-            <li class="nav-item" style="width:33%">
-              <a class="nav-link text-white " data-toggle="tab" style="border:none;" href=" #menu2">Smog <br> Check</a>
+            <li class="nav-item">
+              <a class="nav-link text-white " data-toggle="tab" style="border:none;" href=" #menu2">Smog Check</a>
             </li>
           </ul>
 
           <!-- Tab panes -->
-          <div class="tab-content"
-            style="min-height:40vh;color:white;background-color:red;border-radius:2%;box-shadow:5px 5px 6px slategray">
+          <div class="tab-content" style="min-height:40vh;color:white;background-color:red;">
             <div id="home" class="container tab-pane active"><br>
               <h3>Repair and Maintenance</h3>
               <p>From oil changes to A/C repair to smog checks, head to Oscar's Complete Auto Care &amp; Smog Services
@@ -188,13 +187,31 @@
 
 
 
-
-
   <div class="container-fluid main-container">
 
     <h3>Visit Us
     </h3>
-
+    <!--The div element for the map -->
+    <div id="map"></div>
+    <script>
+      // Initialize and add the map
+      function initMap() {
+        // The location of Uluru
+        var uluru = { lat: -25.344, lng: 131.036 };
+        // The map, centered at Uluru
+        var map = new google.maps.Map(
+          document.getElementById('map'), { zoom: 4, center: uluru });
+        // The marker, positioned at Uluru
+        var marker = new google.maps.Marker({ position: uluru, map: map });
+      }
+    </script>
+    <!--Load the API from the specified URL
+    * The async attribute allows the browser to render the page while the API loads
+    * The key parameter will contain your own API key (which is not needed for this tutorial)
+    * The callback parameter executes the initMap() function
+    -->
+    <script defer src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&callback=initMap">
+    </script>
 
 
 
@@ -260,157 +277,7 @@
     <!-- coupon section-->
 
     <div class="container-fluid" style="margin-bottom:0">
-      <h1> Featured Copuons and Offers </h1>
-      <div class="row">
-        <div class="col-sm-12">
-          <a href="#">
-            <div class="card">
-              <div class="card-body">
-                <div class="row">
-                  <div class="col-sm-4">
-                    <img
-                      src="https://file-optimizer.s3.amazonaws.com/firestone-https://www.firestonecompleteautocare.com/offer/destination-20-08.jpg?1598857961"
-                      alt="$40 Off Set of 4 Firestone Destination LE3 Tires" class="img-fluid">
-                  </div>
-                  <div class="col-sm-8">
-                    <div class="row">
-                      <div class="col-sm-12">
-                        <h5 class="card-title">Free Air Filters with Oil Change&nbsp;</h5>
-                      </div>
-                    </div>
-                    <div class="row">
-                      <div class="col-sm-12">
-                        <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-                      </div>
-                    </div>
-                    <div class="row">
-                      <div class="col-sm-6"></div>
-                      <div class="col-sm-6"><input href="#" class="btn btn-primary" value="Print Coupon"></input></div>
-                    </div>
-                  </div>
-                </div>
-
-
-
-              </div>
-            </div>
-          </a>
-
-        </div>
-      </div>
-      <div class="row">
-        <div class="col-sm-12">
-          <a href="#">
-            <div class="card">
-              <div class="card-body">
-                <div class="row">
-                  <div class="col-sm-4">
-
-                    <img
-                      src="https://file-optimizer.s3.amazonaws.com/firestone-https://www.firestonecompleteautocare.com/offer/destination-20-08.jpg?1598857961"
-                      alt="$40 Off Set of 4 Firestone Destination LE3 Tires" class="img-fluid">
-                  </div>
-                  <div class="col-sm-8">
-                    <div class="row">
-                      <div class="col-sm-12">
-                        <h5 class="card-title">Free Code Scan</h5>
-                      </div>
-                    </div>
-                    <div class="row">
-                      <div class="col-sm-12">
-                        <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-                      </div>
-                    </div>
-                    <div class="row">
-                      <div class="col-sm-6"></div>
-                      <div class="col-sm-6">
-                        <input href="#" class="btn btn-primary" value="Pring Coupon"></input></div>
-                    </div>
-                  </div>
-                </div>
-
-
-
-              </div>
-            </div>
-          </a>
-
-        </div>
-      </div>
-      <div class="row">
-        <div class="col-sm-12">
-          <a href="/offers/40dollarsmog/">
-            <div class="card">
-              <div class="card-body">
-                <div class="row">
-                  <div class="col-sm-4">
-                    <img
-                      src="https://file-optimizer.s3.amazonaws.com/firestone-https://www.firestonecompleteautocare.com/offer/destination-20-08.jpg?1598857961"
-                      alt="$40 Off Set of 4 Firestone Destination LE3 Tires" class="img-fluid">
-                  </div>
-                  <div class="col-sm-8">
-                    <div class="row">
-                      <div class="col-sm-12">
-                        <h5 class="card-title">$40 Smog (certificate included) for vehicles 2000 and up&nbsp;</h5>
-
-                      </div>
-                    </div>
-                    <div class="row">
-                      <div class="col-sm-12">
-                        <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-                      </div>
-                    </div>
-                    <div class="row">
-                      <div class="col-sm-6"></div>
-                      <div class="col-sm-6"><input href="#" class="btn btn-primary" value="Print Coupon"></input></div>
-                    </div>
-                  </div>
-                </div>
-
-
-
-              </div>
-            </div>
-          </a>
-
-        </div>
-      </div>
-
-
-    </div>
-
-
-    <!-- second speech bubble-->
-
-    <div class="speech-bubble">
-
-      The staff is superb. Some of the best customer service I've ever experienced during a car repair.
-      - Erick E., Google Reviews
-
-    </div>
-    <!-- sign up for exclusive offers-->
-
-    <div class="jumbotron jumbotron-fluid">
-      <div class="container">
-        <h1 style="font-size: large;">Sign Up for Exclusive Offers From Oscar's Auto and Smog</h1>
-        <div class="input-group mb-3">
-          <input type="text" class="form-control" placeholder="email address" aria-label="email address"
-            aria-describedby="basic-addon2">
-          <div class="input-group-append">
-            <button class="btn btn-primary" type="button">Submit</button>
-          </div>
-
-        </div>
-        <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone
-          else.</small>
-      </div>
-    </div>
-
-    <!-- services/ products section-->
-
-    <div class="container-fluid" style="margin-bottom:0">
-      Products and Services
-      <!-- new rows-->
+      Featured Copuons and Offers
       <div class="row">
         <div class="col-sm-12">
 
@@ -436,11 +303,9 @@
                     </div>
                   </div>
                   <div class="row">
-                    <div class="col-sm-6"><input href="#" class="btn btn-primary" value="Learn More"></input></div>
-                    <div class="col-sm-6"><input href="#" class="btn btn-primary" value="Book Now"></input></div>
-
+                    <div class="col-sm-6"></div>
+                    <div class="col-sm-6"><a href="#" class="btn btn-primary">Go somewhere</a></div>
                   </div>
-
                 </div>
               </div>
 
@@ -477,8 +342,8 @@
                     </div>
                   </div>
                   <div class="row">
-                    <div class="col-sm-6"><input href="#" class="btn btn-primary" value="Learn More"></input></div>
-                    <div class="col-sm-6"><input href="#" class="btn btn-primary" value="Book Now"></input></div>
+                    <div class="col-sm-6"></div>
+                    <div class="col-sm-6"><a href="#" class="btn btn-primary">Go somewhere</a></div>
                   </div>
                 </div>
               </div>
@@ -517,8 +382,8 @@
                     </div>
                   </div>
                   <div class="row">
-                    <div class="col-sm-6"><input href="#" class="btn btn-primary" value="Learn More"></input></div>
-                    <div class="col-sm-6"><input href="#" class="btn btn-primary" value="Book Now"></input></div>
+                    <div class="col-sm-6"></div>
+                    <div class="col-sm-6"><a href="#" class="btn btn-primary">Go somewhere</a></div>
                   </div>
                 </div>
               </div>
@@ -531,6 +396,25 @@
 
         </div>
       </div>
+
+
+    </div>
+
+
+    <!-- second speech bubble-->
+
+    <div class="speech-bubble">
+
+      The staff is superb. Some of the best customer service I've ever experienced during a car repair.
+      - Erick E., Google Reviews
+
+    </div>
+
+    <!-- services/ products section-->
+
+    <div class="container-fluid" style="margin-bottom:0">
+      Products and Services
+      <!-- new rows-->
       <div class="row">
         <div class="col-sm-12">
 
@@ -556,8 +440,8 @@
                     </div>
                   </div>
                   <div class="row">
-                    <div class="col-sm-6"><input href="#" class="btn btn-primary" value="Learn More"></input></div>
-                    <div class="col-sm-6"><input href="#" class="btn btn-primary" value="Book Now"></input></div>
+                    <div class="col-sm-6"></div>
+                    <div class="col-sm-6"><a href="#" class="btn btn-primary">Go somewhere</a></div>
                   </div>
                 </div>
               </div>
@@ -595,8 +479,8 @@
                     </div>
                   </div>
                   <div class="row">
-                    <div class="col-sm-6"><input href="#" class="btn btn-primary" value="Learn More"></input></div>
-                    <div class="col-sm-6"><input href="#" class="btn btn-primary" value="Book Now"></input></div>
+                    <div class="col-sm-6"></div>
+                    <div class="col-sm-6"><a href="#" class="btn btn-primary">Go somewhere</a></div>
                   </div>
                 </div>
               </div>
@@ -634,8 +518,8 @@
                     </div>
                   </div>
                   <div class="row">
-                    <div class="col-sm-6"><input href="#" class="btn btn-primary" value="Learn More"></input></div>
-                    <div class="col-sm-6"><input href="#" class="btn btn-primary" value="Book Now"></input></div>
+                    <div class="col-sm-6"></div>
+                    <div class="col-sm-6"><a href="#" class="btn btn-primary">Go somewhere</a></div>
                   </div>
                 </div>
               </div>
@@ -673,8 +557,8 @@
                     </div>
                   </div>
                   <div class="row">
-                    <div class="col-sm-6"><input href="#" class="btn btn-primary" value="Learn More"></input></div>
-                    <div class="col-sm-6"><input href="#" class="btn btn-primary" value="Book Now"></input></div>
+                    <div class="col-sm-6"></div>
+                    <div class="col-sm-6"><a href="#" class="btn btn-primary">Go somewhere</a></div>
                   </div>
                 </div>
               </div>
@@ -712,8 +596,8 @@
                     </div>
                   </div>
                   <div class="row">
-                    <div class="col-sm-6"><input href="#" class="btn btn-primary" value="Learn More"></input></div>
-                    <div class="col-sm-6"><input href="#" class="btn btn-primary" value="Book Now"></input></div>
+                    <div class="col-sm-6"></div>
+                    <div class="col-sm-6"><a href="#" class="btn btn-primary">Go somewhere</a></div>
                   </div>
                 </div>
               </div>
@@ -751,8 +635,8 @@
                     </div>
                   </div>
                   <div class="row">
-                    <div class="col-sm-6"><input href="#" class="btn btn-primary" value="Learn More"></input></div>
-                    <div class="col-sm-6"><input href="#" class="btn btn-primary" value="Book Now"></input></div>
+                    <div class="col-sm-6"></div>
+                    <div class="col-sm-6"><a href="#" class="btn btn-primary">Go somewhere</a></div>
                   </div>
                 </div>
               </div>
@@ -790,8 +674,8 @@
                     </div>
                   </div>
                   <div class="row">
-                    <div class="col-sm-6"><input href="#" class="btn btn-primary" value="Learn More"></input></div>
-                    <div class="col-sm-6"><input href="#" class="btn btn-primary" value="Book Now"></input></div>
+                    <div class="col-sm-6"></div>
+                    <div class="col-sm-6"><a href="#" class="btn btn-primary">Go somewhere</a></div>
                   </div>
                 </div>
               </div>
@@ -829,8 +713,8 @@
                     </div>
                   </div>
                   <div class="row">
-                    <div class="col-sm-6"><input href="#" class="btn btn-primary" value="Learn More"></input></div>
-                    <div class="col-sm-6"><input href="#" class="btn btn-primary" value="Book Now"></input></div>
+                    <div class="col-sm-6"></div>
+                    <div class="col-sm-6"><a href="#" class="btn btn-primary">Go somewhere</a></div>
                   </div>
                 </div>
               </div>
@@ -868,9 +752,8 @@
                     </div>
                   </div>
                   <div class="row">
-                    <div class="col-sm-6"><input href="#" class="btn btn-primary" value="Learn More"></input></div>
-                    <div class="col-sm-6"><input href="#" class="btn btn-primary" value="Book Now"></input></div>
-
+                    <div class="col-sm-6"></div>
+                    <div class="col-sm-6"><a href="#" class="btn btn-primary">Go somewhere</a></div>
                   </div>
                 </div>
               </div>
@@ -888,7 +771,23 @@
 
 
 
+      <!-- sign up for exclusive offers-->
 
+      <div class="jumbotron jumbotron-fluid">
+        <div class="container">
+          <h1 style="font-size: large;">Sign Up for Exclusive Offers From Oscar's Auto and Smog</h1>
+          <div class="input-group mb-3">
+            <input type="text" class="form-control" placeholder="email address" aria-label="email address"
+              aria-describedby="basic-addon2">
+            <div class="input-group-append">
+              <button class="btn btn-primary" type="button">Submit</button>
+            </div>
+
+          </div>
+          <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone
+            else.</small>
+        </div>
+      </div>
 
       <!-- responsive quotes container-->
 
@@ -982,197 +881,191 @@
 
 
 
+      <footer id="footer" style="background-color:#343a40;">
+        <div class="container">
+          <div class="row">
+            <div class="col-sm-4">
+              <h6 style="color: white;">TIRES</h6>
 
+              <ul>
+                <li><a href="#" class="footerlink">Blizzak</a></li>
+                <li><a href="#" class="footerlink">Destination</a></li>
+                <li><a href="#" class="footerlink">Toyo</a></li>
+                <li><a href="#" class="footerlink">Escopia</a></li>
+                <li><a href="#" class="footerlink">DriveGuard</a></li>
+                <li><a href="#" class="footerlink">Run-Fiat</a></li>
+                <li><a href="#" class="footerlink">Turanza</a></li>
+                <li><a href="#" class="footerlink">Fuel Fighter</a></li>
+                <li><a href="#" class="footerlink">Primewell</a></li>
+                <li><a href="#" class="footerlink">Potenza</a></li>
+                <li><a href="#" class="footerlink">Winterforce</a></li>
+                <li><a href="#" class="footerlink">Dueler</a></li>
+
+              </ul>
+              <h6 style="color: white;">ABOUT TIRES</h6>
+
+              <ul>
+                <li><a href="#" class="footerlink">Firestone Racing</a></li>
+                <li><a href="#" class="footerlink">How to Check Your Tired Depth</a></li>
+                <li><a href="#" class="footerlink">SUV Tires & Crossover Tires</a></li>
+                <li><a href="#" class="footerlink">Tire Catalog</a></li>
+                <li><a href="#" class="footerlink">Tire Recall Information</a></li>
+                <li><a href="#" class="footerlink">Tire Warranties</a></li>
+
+              </ul>
+
+            </div>
+            <div class="col-sm-8" style="padding:0;margin:0;">
+              <div class="row">
+                <div class="col-sm-6">
+                  <h6 style="color: white;">AUTO REPAIR</h6>
+                  <ul class="">
+                    <li><a href="#" class="footerlink">Services</a></li>
+                    <li><a href="#" class="footerlink">Engine Repair Services </a></li>
+                    <li><a href="#" class="footerlink">Tire Repair</a></li>
+                    <li><a href="#" class="footerlink">Steering and Suspension</a></li>
+                    <li><a href="#" class="footerlink">Alignment</a></li>
+                    <li><a href="#" class="footerlink">Brakes</a></li>
+
+                  </ul>
+                  <h6 style="color: white;">AUTO MAINTENANCES</h6>
+                  <ul class="">
+                    <li><a href="#" class="footerlink">AC Service</a></li>
+                    <li><a href="#" class="footerlink">Batteries </a></li>
+                    <li><a href="#" class="footerlink">Tune-up</a></li>
+                    <li><a href="#" class="footerlink">Drivetrain</a></li>
+                    <li><a href="#" class="footerlink">Vehicle Inspection</a></li>
+                    <li><a href="#" class="footerlink">Oil</a></li>
+                    <li><a href="#" class="footerlink">Radiator</a></li>
+                    <li><a href="#" class="footerlink">Transmission</a></li>
+
+                  </ul>
+                </div>
+                <div class="col-sm-6">
+                  <h6 style="color: white;">Oscar's Auto Care & Smog Services</h6>
+                  <ul>
+                    <li><a href="#" class="footerlink">Who We Are</a></li>
+                    <li><a href="#" class="footerlink">Contact Us</a></li>
+                    <li><a href="" class="footerlink">Schedule Appointment</a></li>
+                    <li><a href="" class="footerlink">FAQS</a></li>
+                    <li><a href="" class="footerlink">Offers and Rebates</a></li>
+                    <li><a href="" class="footerlink">Auto Care</a></li>
+                    <li><a href="" class="footerlink">Blog</a></li>
+                  </ul>
+                  <h6 style="color: white;">Articles</h6>
+                  <ul>
+                    <li><a href="#" class="footerlink">Top Articles</a></li>
+                    <li><a href="#" class="footerlink">Tires</a></li>
+                    <li><a href="" class="footerlink">Brakes</a></li>
+                    <li><a href="" class="footerlink">Batteries</a></li>
+                    <li><a href="" class="footerlink">Alignment</a></li>
+                    <li><a href="" class="footerlink">Oil Change</a></li>
+                    <li><a href="" class="footerlink">Maintenance</a></li>
+                  </ul>
+
+                </div>
+              </div>
+
+              <div class="row">
+                <h6 style="color: white;">Get Coupons</h6>
+                <ul>
+
+
+                  <li>
+                    <div class="input-group mb-3">
+                      <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"
+                        placeholder="Enter email">
+                      <div class="input-group-append">
+                        <button class="btn btn-primary" type="submit">></button>
+                      </div>
+                      <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone
+                        else.</small>
+                    </div>
+
+                  </li>
+
+                </ul>
+              </div>
+            </div>
+
+
+
+          </div>
+        </div>
+      </footer>
+      <!-- Icons -->
+      <footer id="footer">
+
+        <div>
+
+          <ul class="menu">
+            <li><a>Site Map</a></li>
+            <li><a>Terms of Use</a></li>
+            <li><a>Privacy Policy</a></li>
+          </ul>
+
+        </div>
+
+        <div style="display:flex;flex-direction:row;align-self:center;">
+
+          <div class="row">
+
+            <div class="col-sm-3">
+              <ul class="icons">
+                <li>
+                  <a href="#" class="icon brands fab fa-twitter footerlink"><span class="label"></span></a>
+                </li>
+                <li>
+                  <a href="#" class="icon brands fab fa-facebook-f footerlink"><span class="label"></span></a>
+                </li>
+                <li>
+                  <a href="#" class="icon brands fab fa-instagram footerlink"><span class="label"></span></a>
+                </li>
+                <li>
+                  <a href="#" class="icon brands fab fa-linkedin-in footerlink"><span class="label"></span></a>
+                </li>
+
+                <li>
+                  <a href="#" class="icon brands fab fa-pinterest footerlink"><span class="label"></span></a>
+                </li>
+              </ul>
+
+            </div>
+
+            <div class="col-sm-9">
+
+              <!-- Menu -->
+              <ul class="">
+                <li>&copy; Oscar's Auto Care & Smog Services</li>
+                <li>Designed by <a href="https://omnitek.dev">Omnitek.Dev</a></li>
+              </ul>
+            </div>
+
+          </div>
+
+
+
+
+
+
+
+        </div>
+
+      </footer>
 
     </div>
 
-  </div>
-  <div class="container-fluid">
-    <footer id="footer" style="background-color:#343a40;">
-      <div class="container">
-        <div class="row">
-          <div class="col-sm-4">
-            <h6 style="color: white;">TIRES</h6>
-
-            <ul>
-              <li><a href="#" class="footerlink">Blizzak</a></li>
-              <li><a href="#" class="footerlink">Destination</a></li>
-              <li><a href="#" class="footerlink">Toyo</a></li>
-              <li><a href="#" class="footerlink">Escopia</a></li>
-              <li><a href="#" class="footerlink">DriveGuard</a></li>
-              <li><a href="#" class="footerlink">Run-Fiat</a></li>
-              <li><a href="#" class="footerlink">Turanza</a></li>
-              <li><a href="#" class="footerlink">Fuel Fighter</a></li>
-              <li><a href="#" class="footerlink">Primewell</a></li>
-              <li><a href="#" class="footerlink">Potenza</a></li>
-              <li><a href="#" class="footerlink">Winterforce</a></li>
-              <li><a href="#" class="footerlink">Dueler</a></li>
-
-            </ul>
-            <h6 style="color: white;">ABOUT TIRES</h6>
-
-            <ul>
-              <li><a href="#" class="footerlink">Firestone Racing</a></li>
-              <li><a href="#" class="footerlink">How to Check Your Tired Depth</a></li>
-              <li><a href="#" class="footerlink">SUV Tires & Crossover Tires</a></li>
-              <li><a href="#" class="footerlink">Tire Catalog</a></li>
-              <li><a href="#" class="footerlink">Tire Recall Information</a></li>
-              <li><a href="#" class="footerlink">Tire Warranties</a></li>
-
-            </ul>
-
-          </div>
-          <div class="col-sm-8" style="padding:0;margin:0;">
-            <div class="row">
-              <div class="col-sm-6">
-                <h6 style="color: white;">AUTO REPAIR</h6>
-                <ul class="">
-                  <li><a href="#" class="footerlink">Services</a></li>
-                  <li><a href="#" class="footerlink">Engine Repair Services </a></li>
-                  <li><a href="#" class="footerlink">Tire Repair</a></li>
-                  <li><a href="#" class="footerlink">Steering and Suspension</a></li>
-                  <li><a href="#" class="footerlink">Alignment</a></li>
-                  <li><a href="#" class="footerlink">Brakes</a></li>
-
-                </ul>
-                <h6 style="color: white;">AUTO MAINTENANCES</h6>
-                <ul class="">
-                  <li><a href="#" class="footerlink">AC Service</a></li>
-                  <li><a href="#" class="footerlink">Batteries </a></li>
-                  <li><a href="#" class="footerlink">Tune-up</a></li>
-                  <li><a href="#" class="footerlink">Drivetrain</a></li>
-                  <li><a href="#" class="footerlink">Vehicle Inspection</a></li>
-                  <li><a href="#" class="footerlink">Oil</a></li>
-                  <li><a href="#" class="footerlink">Radiator</a></li>
-                  <li><a href="#" class="footerlink">Transmission</a></li>
-
-                </ul>
-              </div>
-              <div class="col-sm-6">
-                <h6 style="color: white;">Oscar's Auto Care & Smog Services</h6>
-                <ul>
-                  <li><a href="#" class="footerlink">Who We Are</a></li>
-                  <li><a href="#" class="footerlink">Contact Us</a></li>
-                  <li><a href="" class="footerlink">Schedule Appointment</a></li>
-                  <li><a href="" class="footerlink">FAQS</a></li>
-                  <li><a href="" class="footerlink">Offers and Rebates</a></li>
-                  <li><a href="" class="footerlink">Auto Care</a></li>
-                  <li><a href="" class="footerlink">Blog</a></li>
-                </ul>
-                <h6 style="color: white;">Articles</h6>
-                <ul>
-                  <li><a href="#" class="footerlink">Top Articles</a></li>
-                  <li><a href="#" class="footerlink">Tires</a></li>
-                  <li><a href="" class="footerlink">Brakes</a></li>
-                  <li><a href="" class="footerlink">Batteries</a></li>
-                  <li><a href="" class="footerlink">Alignment</a></li>
-                  <li><a href="" class="footerlink">Oil Change</a></li>
-                  <li><a href="" class="footerlink">Maintenance</a></li>
-                </ul>
-
-              </div>
-            </div>
-
-            <div class="row">
-
-              <ul>
-                <h6 style="color: white;">Get Coupons</h6>
-
-                <li>
-                  <div class="input-group mb-3">
-
-                    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"
-                      placeholder="Enter email">
-                    <div class="input-group-append">
-                      <button class="btn btn-primary" type="submit">></button>
-                    </div>
-
-                  </div>
-                  <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone
-                    else.</small>
-                </li>
-
-              </ul>
-            </div>
-          </div>
-
-
-
-        </div>
-      </div>
-    </footer>
-    <!-- Icons -->
-    <footer id="footer">
-
-      <div>
-
-        <ul class="menu">
-          <li><a>Site Map</a></li>
-          <li><a>Terms of Use</a></li>
-          <li><a>Privacy Policy</a></li>
-        </ul>
-
-      </div>
-
-      <div style="display:flex;flex-direction:row;align-self:center;">
-
-        <div class="row">
-
-          <div class="col-sm-3">
-            <ul class="icons">
-              <li>
-                <a href="#" class="icon brands fab fa-twitter footerlink"><span class="label"></span></a>
-              </li>
-              <li>
-                <a href="#" class="icon brands fab fa-facebook-f footerlink"><span class="label"></span></a>
-              </li>
-              <li>
-                <a href="#" class="icon brands fab fa-instagram footerlink"><span class="label"></span></a>
-              </li>
-              <li>
-                <a href="#" class="icon brands fab fa-linkedin-in footerlink"><span class="label"></span></a>
-              </li>
-
-              <li>
-                <a href="#" class="icon brands fab fa-pinterest footerlink"><span class="label"></span></a>
-              </li>
-            </ul>
-
-          </div>
-
-          <div class="col-sm-9">
-
-            <!-- Menu -->
-            <ul class="">
-              <li>&copy; Oscar's Auto Care & Smog Services</li>
-              <li>Designed by <a href="https://omnitek.dev">Omnitek.Dev</a></li>
-            </ul>
-          </div>
-
-        </div>
 
 
 
 
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 
-
-
-      </div>
-
-    </footer>
-
-  </div>
-
-
-
-
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
-  <script src="js/popper.min.js"></script>
-  <script src="/js/main.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.4.2/gsap.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.4.2/ScrollTrigger.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="/js/main.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.4.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.4.2/ScrollTrigger.min.js"></script>
 
 </body>
 
