@@ -220,3 +220,19 @@ ul.menu li {
   z-index:10000;
 }
 
+
+//full height nav pills
+
+@media only screen and (min-width: 991px) {
+  .navbar {
+    padding-top: 0;
+    padding-bottom: 0;
+  }
+
+  .nav-pills .nav-link {
+    padding-top: 15px;
+    padding-bottom: 15px;
+    border-radius: 0;
+  }
+}
+

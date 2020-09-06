@@ -1,19 +1,25 @@
 @import url("https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,900");
 .mainnav {
-  background-color: #383838; }
+  background-color: #383838;
+}
 
 @media (min-width: 460px) {
   .main-container {
     padding-left: 20%;
-    padding-right: 20%; }
-
+    padding-right: 20%;
+  }
   .couponimages {
-    width: 10rem; } }
+    width: 10rem;
+  }
+}
+
 .nav-item {
-  color: white !important; }
+  color: white !important;
+}
 
 body {
-  font: 100% Helvitica, sans-serif; }
+  font: 100% Helvitica, sans-serif;
+}
 
 #footer {
   background-color: #32323b;
@@ -23,32 +29,39 @@ body {
   justify-content: left;
   line-height: 1.5em;
   text-align: left;
-  padding: 2em 1em 2em 1em; }
+  padding: 2em 1em 2em 1em;
+}
 
 ul.menu li {
   display: inline;
   line-height: 1em;
   border-left: solid 1px #e5e6e7;
   padding: 0 0 0 0.5em;
-  margin: 0 0 0 0.5em; }
+  margin: 0 0 0 0.5em;
+}
 
 ul {
-  list-style-type: none; }
+  list-style-type: none;
+}
 
 ul.icons li {
-  display: inline; }
+  display: inline;
+}
 
 .nav-tabs .nav-link.active {
-  background-color: #ad3c50; }
+  background-color: #ad3c50;
+}
 
 .nav-tabs .nav-link {
-  background-color: #9e162f; }
+  background-color: #9e162f;
+}
 
 /* carousel */
 #quote-carousel {
   padding: 0px 10px 30px 10px;
   margin-top: 30px;
-  background-color: lightgray; }
+  background-color: lightgray;
+}
 
 /* Control buttons  */
 #quote-carousel .carousel-control {
@@ -56,19 +69,23 @@ ul.icons li {
   color: #222;
   font-size: 2.3em;
   text-shadow: none;
-  margin-top: 30px; }
+  margin-top: 30px;
+}
 
 /* Previous button  */
 #quote-carousel .carousel-control.left {
-  left: -12px; }
+  left: -12px;
+}
 
 /* Next button  */
 #quote-carousel .carousel-control.right {
-  right: -12px !important; }
+  right: -12px !important;
+}
 
 /* Changes the position of the indicators */
 #quote-carousel .carousel-indicators {
-  /*none*/ }
+  /*none*/
+}
 
 /* Changes the color of the indicators */
 #quote-carousel .carousel-indicators li {
@@ -77,28 +94,34 @@ ul.icons li {
   -webkit-border-radius: 50%;
   -moz-border-radius: 50%;
   -ms-border-radius: 50%;
-  -o-border-radius: 50%; }
+  -o-border-radius: 50%;
+}
 
 #quote-carousel .carousel-indicators .active {
-  background: #333333; }
+  background: #333333;
+}
 
 #quote-carousel img {
   width: 250px;
-  height: 100px; }
+  height: 100px;
+}
 
 /* End carousel */
 .item blockquote {
   border-left: none;
-  margin: 0; }
+  margin: 0;
+}
 
 .item blockquote img {
-  margin-bottom: 10px; }
+  margin-bottom: 10px;
+}
 
 .item blockquote p:before {
   content: "\f10d";
   font-family: 'Fontawesome';
   float: left;
-  margin-right: 10px; }
+  margin-right: 10px;
+}
 
 /**
   MEDIA QUERIES
@@ -107,33 +130,36 @@ ul.icons li {
 @media (min-width: 768px) {
   #quote-carousel {
     margin-bottom: 0;
-    padding: 0 40px 30px 40px; } }
+    padding: 0 40px 30px 40px;
+  }
+}
+
 /* Small devices (tablets, up to 768px) */
 @media (max-width: 768px) {
   /* Make the indicators larger for easier clicking with fingers/thumb on mobile */
   #quote-carousel .carousel-indicators {
-    bottom: -20px !important; }
-
+    bottom: -20px !important;
+  }
   #quote-carousel .carousel-indicators li {
     display: inline-block;
     margin: 0px 5px;
     width: 15px;
-    height: 15px; }
-
+    height: 15px;
+  }
   #quote-carousel .carousel-indicators li.active {
     margin: 0px 5px;
     width: 20px;
-    height: 20px; } }
+    height: 20px;
+  }
+}
+
 .speech-bubble {
   position: relative;
   background: #00aabb;
   border-radius: .4em;
   padding: 1rem;
   box-shadow: 2px 2px 10px slategray;
-
-  width: 50%;
-  left: 25%;
-  padding: 1rem; }
+}
 
 .speech-bubble:after {
   content: '';
@@ -147,18 +173,36 @@ ul.icons li {
   border-bottom: 0;
   border-left: 0;
   margin-left: -12.5px;
-  margin-bottom: -25px; }
+  margin-bottom: -25px;
+}
 
 #footer {
   display: flex;
   flex-direction: column;
-  padding: 1rem; }
+  padding: 1rem;
+}
 
 .nav-item {
-  align-self: center; }
+  align-self: center;
+}
 
 .footerlink {
-  color: lightgrey; }
+  color: lightgrey;
+}
 
 .mainmodal {
-  z-index: 10000; }
+  z-index: 10000;
+}
+
+@media only screen and (min-width: 991px) {
+  .navbar {
+    padding-top: 0;
+    padding-bottom: 0;
+  }
+  .nav-pills .nav-link {
+    padding-top: 15px;
+    padding-bottom: 15px;
+    border-radius: 0;
+  }
+}
+/*# sourceMappingURL=main.css.map */
