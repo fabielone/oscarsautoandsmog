@@ -3,8 +3,10 @@
 }
 
 
+@media (min-width: 768px) {
+
 //made navbar items full height
-.nav-item {
+.nav1item {
 
     padding:.5rem;
     margin:0;
@@ -16,7 +18,8 @@
 
 }
 
-.nav-item:hover {
+.nav1item:hover {
 
     background-color:red;
+}
 }
