@@ -1,5 +1,6 @@
+$mainnav :#383838;
 .mainnav {
-    background-color: rgb(56, 56, 56);
+    background-color:$mainnav;
 }
 
 
@@ -42,7 +43,7 @@
     right: -90%;
     height: 100vh;
     z-index: 99999;
-    background: #7386D5;
+    background:$mainnav;
     color: #fff;
     transition: all 0.3s;
     overflow-y: scroll;
