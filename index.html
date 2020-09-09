@@ -11,7 +11,9 @@
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
     integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous" />
   <link href="css/bootstrap-4.4.1.css" rel="stylesheet" type="text/css">
-
+  <!-- Bootstrap CSS CDN -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css"
+    integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
   <script src="https://kit.fontawesome.com/c1689eda50.js" crossorigin="anonymous"></script>
   <style>
   </style>
@@ -21,10 +23,87 @@
   <script src="jQueryAssets/jquery-1.11.1.min.js"></script>
 
   <link href="./css/main.css" rel="stylesheet" type="text/css">
+  <!-- Scrollbar Custom CSS -->
+  <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/malihu-custom-scrollbar-plugin/3.1.5/jquery.mCustomScrollbar.min.css">
+
+  <!-- Font Awesome JS -->
+
+  <script defer src="https://use.fontawesome.com/releases/v5.0.13/js/fontawesome.js"
+    integrity="sha384-6OIrr52G08NpOFSZdxxz1xdNSndlD4vdcf/q2myIUVO0VsqaGHJsB0RaBE01VTOY"
+    crossorigin="anonymous"></script>
+
 </head>
 
 <body>
 
+  <!--collapsable menu-->
+  <div class="wrapper1">
+    <!-- Sidebar  -->
+    <nav id="sidebar1">
+      <div id="dismiss1">
+        <i class="fas fa-arrow-left"></i>
+      </div>
+
+      <div class="sidebar-header1">
+        <h3>Bootstrap Sidebar</h3>
+      </div>
+
+      <ul class="list-unstyled components">
+        <p>Dummy Heading</p>
+        <li class="active">
+          <a href="#homeSubmenu" data-toggle="collapse" aria-expanded="false">Home</a>
+          <ul class="collapse list-unstyled" id="homeSubmenu">
+            <li>
+              <a href="#">Home 1</a>
+            </li>
+            <li>
+              <a href="#">Home 2</a>
+            </li>
+            <li>
+              <a href="#">Home 3</a>
+            </li>
+          </ul>
+        </li>
+        <li>
+          <a href="#">About</a>
+          <a href="#pageSubmenu" data-toggle="collapse" aria-expanded="false">Pages</a>
+          <ul class="collapse list-unstyled" id="pageSubmenu">
+            <li>
+              <a href="#">Page 1</a>
+            </li>
+            <li>
+              <a href="#">Page 2</a>
+            </li>
+            <li>
+              <a href="#">Page 3</a>
+            </li>
+          </ul>
+        </li>
+        <li>
+          <a href="#">Portfolio</a>
+        </li>
+        <li>
+          <a href="#">Contact</a>
+        </li>
+      </ul>
+
+      <ul class="list-unstyled CTAs">
+        <li>
+          <a href="https://bootstrapious.com/tutorial/files/sidebar.zip" class="download">Download source</a>
+        </li>
+        <li>
+          <a href="https://bootstrapious.com/p/bootstrap-sidebar" class="article">Back to article</a>
+        </li>
+      </ul>
+    </nav>
+
+
+    <!-- Page Content  -->
+
+  </div>
+
+  <div class="overlay1"></div>
 
   <!-- Modal -->
   <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle"
@@ -63,8 +142,10 @@
   <nav class="navbar sticky-top navbar-expand-md mainnav navbar-dark" style="padding:0;margin:0;">
 
     <a class="navbar-brand " href="#" style="margin:0;padding:0;"><img src="imgs/logo.png" alt="" width="200"></a>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar"> <span
-        class="navbar-toggler-icon"></span></button>
+
+    <button type="button" id="sidebarCollapse" class="navbar-toggler btn btn-info">
+      <span class="navbar-toggler-icon"></span>
+    </button>
     <div class="collapse navbar-collapse" id="collapsibleNavbar">
       <ul class="navbar-nav ">
 
@@ -1198,6 +1279,31 @@
   <script src="/js/main.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.4.2/gsap.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.4.2/ScrollTrigger.min.js"></script>
+
+
+  <!-- jQuery Custom Scroller CDN -->
+  <script
+    src="https://cdnjs.cloudflare.com/ajax/libs/malihu-custom-scrollbar-plugin/3.1.5/jquery.mCustomScrollbar.concat.min.js"></script>
+
+  <script type="text/javascript">
+    $(document).ready(function () {
+      $("#sidebar1").mCustomScrollbar({
+        theme: "minimal"
+      });
+
+      $('#dismiss1, .overlay1').on('click', function () {
+        $('#sidebar1').removeClass('active');
+        $('.overlay1').removeClass('active');
+      });
+
+      $('#sidebarCollapse').on('click', function () {
+        $('#sidebar1').addClass('active');
+        $('.overlay1').addClass('active');
+        $('.collapse.in').toggleClass('in');
+        $('a[aria-expanded=true]').attr('aria-expanded', 'false');
+      });
+    });
+  </script>
 
 </body>
 
