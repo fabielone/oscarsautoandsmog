@@ -10,101 +10,18 @@
     content="Need reliable auto services or a smog check near near Colton,Ca? Then Look no futher,oscarsautoandsmog.com, is what you have been looking for.">
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
     integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous" />
-  <link href="css/bootstrap-4.4.1.css" rel="stylesheet" type="text/css">
-  <!-- Bootstrap CSS CDN -->
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css"
-    integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
+  <link href="../css/bootstrap-4.4.1.css" rel="stylesheet" type="text/css">
+  <link href="./../css/main.css" rel="stylesheet" type="text/css">
   <script src="https://kit.fontawesome.com/c1689eda50.js" crossorigin="anonymous"></script>
   <style>
+
   </style>
   <link href="jQueryAssets/jquery.ui.core.min.css" rel="stylesheet" type="text/css">
   <link href="jQueryAssets/jquery.ui.theme.min.css" rel="stylesheet" type="text/css">
-
   <script src="jQueryAssets/jquery-1.11.1.min.js"></script>
-
-  <link href="./css/main.css" rel="stylesheet" type="text/css">
-  <!-- Scrollbar Custom CSS -->
-  <link rel="stylesheet"
-    href="https://cdnjs.cloudflare.com/ajax/libs/malihu-custom-scrollbar-plugin/3.1.5/jquery.mCustomScrollbar.min.css">
-
-  <!-- Font Awesome JS -->
-
-  <script defer src="https://use.fontawesome.com/releases/v5.0.13/js/fontawesome.js"
-    integrity="sha384-6OIrr52G08NpOFSZdxxz1xdNSndlD4vdcf/q2myIUVO0VsqaGHJsB0RaBE01VTOY"
-    crossorigin="anonymous"></script>
-
 </head>
 
 <body>
-
-  <!--collapsable menu-->
-  <div class="wrapper1">
-    <!-- Sidebar  -->
-    <nav id="sidebar1">
-      <div id="dismiss1">
-        <i class="fas fa-arrow-right"></i>
-      </div>
-
-      <div class="sidebar-header1">
-        <h3>Oscars Complete Auto Care </h3>
-      </div>
-
-      <ul class="list-unstyled components">
-        <p>Auto Care</p>
-        <li class="active">
-          <a href="#homeSubmenu" data-toggle="collapse" aria-expanded="false">Home</a>
-          <ul class="collapse list-unstyled" id="homeSubmenu">
-            <li>
-              <a href="#">Home 1</a>
-            </li>
-            <li>
-              <a href="#">Home 2</a>
-            </li>
-            <li>
-              <a href="#">Home 3</a>
-            </li>
-          </ul>
-        </li>
-        <li>
-          <a href="#">About</a>
-          <a href="#pageSubmenu" data-toggle="collapse" aria-expanded="false">Pages</a>
-          <ul class="collapse list-unstyled" id="pageSubmenu">
-            <li>
-              <a href="#">Page 1</a>
-            </li>
-            <li>
-              <a href="#">Page 2</a>
-            </li>
-            <li>
-              <a href="#">Page 3</a>
-            </li>
-          </ul>
-        </li>
-        <li>
-          <a href="#">Portfolio</a>
-        </li>
-        <li>
-          <a href="#">Contact</a>
-        </li>
-      </ul>
-
-      <ul class="list-unstyled CTAs">
-        <li>
-          <a href="#" class="download">Book Now</a>
-        </li>
-        <li>
-          <a href="#" class="article">Call Us</a>
-        </li>
-      </ul>
-    </nav>
-
-
-    <!-- Page Content  -->
-
-  </div>
-
-  <div class="overlay1"></div>
-
   <!-- Modal -->
   <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle"
     aria-hidden="true">
@@ -131,72 +48,55 @@
 
   <div class="continer-fluid">
     <div class="row covidwarningsrow" style="max-width:100%;margin:0;">
-      <div class="col-sm-6"><a href="#"><img src="imgs/covidheader.svg" alt=""></a></div>
-      <div class="col-sm-6" style="background-color:black;"><a href="#"><img src="imgs/contactfree.svg" alt=""></a>
+      <div class="col-sm-6"><a href="#"><img src="./../imgs/covidheader.svg" alt=""></a></div>
+      <div class="col-sm-6" style="background-color:black;"><a href="#"><img src="./../imgs/contactfree.svg" alt=""></a>
       </div>
     </div>
 
 
   </div>
 
-  <nav class="navbar sticky-top navbar-expand-md mainnav navbar-dark" style="padding:0;margin:0;">
+  <nav class="navbar sticky-top navbar-expand-md mainnav navbar-dark">
 
-    <a class="navbar-brand " href="#" style="margin:0;padding:0;"><img src="imgs/logo.png" alt="" width="200"></a>
-
-    <button type="button" id="sidebarCollapse" class="navbar-toggler btn btn-info">
-      <span class="navbar-toggler-icon"></span>
-    </button>
+    <a class="navbar-brand " href="#"><img src="./../imgs/logo.png" alt="" width="200"></a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar"> <span
+        class="navbar-toggler-icon"></span></button>
     <div class="collapse navbar-collapse" id="collapsibleNavbar">
       <ul class="navbar-nav ">
 
-        <li class="nav-item nav1item"> <a class="nav-link" href="#">Home&nbsp; </a></li>
-        <li class="nav-item nav1item"> <a class="nav-link" href="#">Complete<br>
+        <li class="nav-item"> <a class="nav-link" href="#">Home&nbsp; </a></li>
+        <li class="nav-item"> <a class="nav-link" href="#">Complete<br>
             Auto Care <br>
           </a></li>
-        <li class="nav-item" style="width:33%">
-          <a class="nav-link text-white active" data-toggle="tab" style="border:none;" href=" #home">Auto <br>
-            Repair&nbsp;</a>
-        </li>
-        <li class="nav-item nav1item"> <a class="nav-link" href="#">A/C&nbsp;
+        <li class="nav-item"> <a class="nav-link" href="#">A/C&nbsp;
             Repair&nbsp;&nbsp;</a></li>
+        <li class="nav-item"> </li>
 
+        </a></li>
+        <li class="nav-item"> </li>
 
-
-
-
-        <li class="nav-item  nav1item"> <a class="nav-link" href="#">Smog Check</a></li>
-        <li class="nav-item" style="width:33%">
-          <a class="nav-link text-white " data-toggle="tab" style="border:none;" href=" #menu2">Offers</a>
-        </li>
+        <li class="nav-item"> <a class="nav-link" href="#">Smog Check</a></li>
 
         <!-- Button trigger modal -->
         <div>
 
         </div>
+        <li class="nav-item ">
 
-        <ul class="navbar-nav">
-          <li class="nav-item nav1item">
-            <a class="nav-link fa fa-calendar ml-auto " href="#" data-toggle="modal" data-target="#exampleModalCenter"
-              style="color:white;">
-              Book Now!
-            </a>
-          </li>
-          <li class="nav-item nav1item">
-
-            <a class="nav-link" href="#" style="color:white;"> Call Now </a>
-          </li>
-        </ul>
+        </li>
 
 
-
-
+        <li class="nav-item "> </li>
 
 
 
       </ul>
 
-
-
+      <a class="nav-link fa fa-calendar ml-auto " href="#" data-toggle="modal" data-target="#exampleModalCenter"
+        style="color:white;">
+        Book Now!
+      </a>
+      <a class="nav-link" href="#" style="color:white;"> Call Now </a>
 
 
     </div>
@@ -232,24 +132,21 @@
         <div class="container" style="padding:0;">
 
           <!-- Nav tabs -->
-          <ul class="nav nav-tabs" role="tablist" style="border:none;">
-            <li class="nav-item" style="width:33%">
-              <a class="nav-link text-white active" data-toggle="tab" style="border:none;" href=" #home">Auto <br>
+          <ul class="nav nav-tabs" role="tablist">
+            <li class="nav-item">
+              <a class="nav-link text-white active" data-toggle="tab" style="border:none;" href=" #home">Auto
                 Care&nbsp;</a>
             </li>
-
-            <li class="nav-item" style="width:33%">
-              <a class="nav-link text-white " data-toggle="tab" style="border:none;" href=" #menu1">A/C <br> Repair</a>
+            <li class="nav-item">
+              <a class="nav-link text-white " data-toggle="tab" style="border:none;" href=" #menu1">A/C Repair</a>
             </li>
-            <li class="nav-item" style="width:33%">
-              <a class="nav-link text-white " data-toggle="tab" style="border:none;" href=" #menu2">Smog <br> Check</a>
+            <li class="nav-item">
+              <a class="nav-link text-white " data-toggle="tab" style="border:none;" href=" #menu2">Smog Check</a>
             </li>
-
           </ul>
 
           <!-- Tab panes -->
-          <div class="tab-content"
-            style="min-height:40vh;color:white;background-color:red;border-radius:2%;box-shadow:5px 5px 6px slategray">
+          <div class="tab-content" style="min-height:40vh;color:white;background-color:red;">
             <div id="home" class="container tab-pane active"><br>
               <h3>Repair and Maintenance</h3>
               <p>From oil changes to A/C repair to smog checks, head to Oscar's Complete Auto Care &amp; Smog Services
@@ -282,7 +179,29 @@
 
   <div class="container-fluid main-container">
 
-
+    <h3>Visit Us
+    </h3>
+    <!--The div element for the map -->
+    <div id="map"></div>
+    <script>
+      // Initialize and add the map
+      function initMap() {
+        // The location of Uluru
+        var uluru = { lat: -25.344, lng: 131.036 };
+        // The map, centered at Uluru
+        var map = new google.maps.Map(
+          document.getElementById('map'), { zoom: 4, center: uluru });
+        // The marker, positioned at Uluru
+        var marker = new google.maps.Marker({ position: uluru, map: map });
+      }
+    </script>
+    <!--Load the API from the specified URL
+    * The async attribute allows the browser to render the page while the API loads
+    * The key parameter will contain your own API key (which is not needed for this tutorial)
+    * The callback parameter executes the initMap() function
+    -->
+    <script defer src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&callback=initMap">
+    </script>
 
 
 
@@ -296,13 +215,13 @@
       </ol>
       <div class="carousel-inner" style="background-size:cover;">
         <div class="carousel-item active">
-          <img class="d-block w-100 " src="./imgs/banner1.jpg" alt="First slide">
+          <img class="d-block w-100 " src="./../imgs/banner1.jpg" alt="First slide">
         </div>
         <div class="carousel-item">
-          <img class="d-block w-100 " src="./imgs/banner2.jpg" alt="Second slide">
+          <img class="d-block w-100 " src="./../imgs/banner2.jpg" alt="Second slide">
         </div>
         <div class="carousel-item ">
-          <img class="d-block w-100 " src="./imgs/banner3.jpg" alt="Third slide">
+          <img class="d-block w-100 " src="./../imgs/banner1.jpg" alt="Third slide">
         </div>
       </div>
       <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
@@ -348,119 +267,121 @@
     <!-- coupon section-->
 
     <div class="container-fluid" style="margin-bottom:0">
-      <h1> Featured Coupons and Offers </h1>
-      <div class="row" style="margin-bottom:2rem;">
+      Featured Copuons and Offers
+      <div class="row">
         <div class="col-sm-12">
-          <a href="#">
-            <div class="card" style="box-shadow:2px 2px 5px slategray">
-              <div class="card-body">
-                <div class="row">
-                  <div class="col-sm-4">
-                    <img src="/imgs/free_air_filter.jpg" alt="$40 Off Set of 4 Firestone Destination LE3 Tires"
-                      class="img-fluid">
+
+          <div class="card">
+            <div class="card-body">
+              <div class="row">
+                <div class="col-sm-4"><a
+                    href="https://www.firestonecompleteautocare.com/offers/offer-detail/destination-20-08"
+                    target="_blank" class="site-offer-cta-button">
+                    <img
+                      src="https://file-optimizer.s3.amazonaws.com/firestone-https://www.firestonecompleteautocare.com/offer/destination-20-08.jpg?1598857961"
+                      alt="$40 Off Set of 4 Firestone Destination LE3 Tires" class="couponimages">
+                  </a></div>
+                <div class="col-sm-8">
+                  <div class="row">
+                    <div class="col-sm-12">
+                      <h5 class="card-title">Complete Auto Care&nbsp;</h5>
+                    </div>
                   </div>
-                  <div class="col-sm-8">
-                    <div class="row">
-                      <div class="col-sm-12">
-                        <h5 class="card-title">Free Air Filters with Oil Change&nbsp;</h5>
-                      </div>
+                  <div class="row">
+                    <div class="col-sm-12">
+                      <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
                     </div>
-                    <div class="row">
-                      <div class="col-sm-12">
-                        <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-                      </div>
-                    </div>
-                    <div class="row">
-                      <div class="col-sm-6"></div>
-                      <div class="col-sm-6"><button href="#" class="btn btn-danger" value="Print Coupon">Print
-                          Coupon</button></div>
-                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col-sm-6"></div>
+                    <div class="col-sm-6"><a href="#" class="btn btn-primary">Go somewhere</a></div>
                   </div>
                 </div>
-
-
-
               </div>
+
+
+
             </div>
+          </div>
           </a>
 
         </div>
       </div>
-      <div class="row" style="margin-bottom:2rem;">
+      <div class="row">
         <div class="col-sm-12">
-          <a href="#">
-            <div class="card" style="box-shadow:2px 2px 5px slategray">
-              <div class="card-body">
-                <div class="row">
-                  <div class="col-sm-4">
 
-                    <img src="/imgs/code-scan.jpg" alt="$40 Off Set of 4 Firestone Destination LE3 Tires"
-                      class="img-fluid">
+          <div class="card">
+            <div class="card-body">
+              <div class="row">
+                <div class="col-sm-4"><a
+                    href="https://www.firestonecompleteautocare.com/offers/offer-detail/destination-20-08"
+                    target="_blank" class="site-offer-cta-button">
+                    <img
+                      src="https://file-optimizer.s3.amazonaws.com/firestone-https://www.firestonecompleteautocare.com/offer/destination-20-08.jpg?1598857961"
+                      alt="$40 Off Set of 4 Firestone Destination LE3 Tires" class="couponimages">
+                  </a></div>
+                <div class="col-sm-8">
+                  <div class="row">
+                    <div class="col-sm-12">
+                      <h5 class="card-title">Emission Repairs</h5>
+                    </div>
                   </div>
-                  <div class="col-sm-8">
-                    <div class="row">
-                      <div class="col-sm-12">
-                        <h5 class="card-title">Free Check Engine Code Scan</h5>
-                      </div>
+                  <div class="row">
+                    <div class="col-sm-12">
+                      <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
                     </div>
-                    <div class="row">
-                      <div class="col-sm-12">
-                        <p class="card-text"><strong>Check engine light on? Don't ignore it.</strong> <br><br>Stop by
-                          Oscar's Complete Auto Care today and let our Professional Staff scan your vehicle for free.
-                          We'll retrieve the codes, discuss possible solutions, and give you the best competative
-                          prices.</p>
-                      </div>
-                    </div>
-                    <div class="row">
-                      <div class="col-sm-6"></div>
-                      <div class="col-sm-6">
-                        <button href="#" class="btn btn-danger" value="Pring Coupon">Print Coupon</button></div>
-                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col-sm-6"></div>
+                    <div class="col-sm-6"><a href="#" class="btn btn-primary">Go somewhere</a></div>
                   </div>
                 </div>
-
-
-
               </div>
+
+
+
             </div>
+          </div>
           </a>
 
         </div>
       </div>
-      <div class="row" style="margin-bottom:2rem;">
+      <div class="row">
         <div class="col-sm-12">
-          <a href="/offers/40dollarsmog/">
-            <div class="card" style="box-shadow:2px 2px 5px slategray">
-              <div class="card-body">
-                <div class="row">
-                  <div class="col-sm-4">
-                    <img src="/imgs/smog.jpg" alt="$40 Off Set of 4 Firestone Destination LE3 Tires" class="img-fluid">
-                  </div>
-                  <div class="col-sm-8">
-                    <div class="row">
-                      <div class="col-sm-12">
-                        <h5 class="card-title">$40 Smog (certificate included) for vehicles 2000 and up&nbsp;</h5>
 
-                      </div>
+          <div class="card">
+            <div class="card-body">
+              <div class="row">
+                <div class="col-sm-4"><a
+                    href="https://www.firestonecompleteautocare.com/offers/offer-detail/destination-20-08"
+                    target="_blank" class="site-offer-cta-button">
+                    <img
+                      src="https://file-optimizer.s3.amazonaws.com/firestone-https://www.firestonecompleteautocare.com/offer/destination-20-08.jpg?1598857961"
+                      alt="$40 Off Set of 4 Firestone Destination LE3 Tires" class="couponimages">
+                  </a></div>
+                <div class="col-sm-8">
+                  <div class="row">
+                    <div class="col-sm-12">
+                      <h5 class="card-title">Complete Auto Care&nbsp;</h5>
+                      <h5>Computerized Diagnotics</h5>
                     </div>
-                    <div class="row">
-                      <div class="col-sm-12">
-                        <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-                      </div>
+                  </div>
+                  <div class="row">
+                    <div class="col-sm-12">
+                      <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
                     </div>
-                    <div class="row">
-                      <div class="col-sm-6"></div>
-                      <div class="col-sm-6"><button href="#" class="btn btn-danger" value="Print Coupon">Print
-                          Coupon</button>
-                      </div>
-                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col-sm-6"></div>
+                    <div class="col-sm-6"><a href="#" class="btn btn-primary">Go somewhere</a></div>
                   </div>
                 </div>
-
-
-
               </div>
+
+
+
             </div>
+          </div>
           </a>
 
         </div>
@@ -478,33 +399,16 @@
       - Erick E., Google Reviews
 
     </div>
-    <!-- sign up for exclusive offers-->
-
-    <div class="jumbotron jumbotron-fluid">
-      <div class="container">
-        <h1 style="font-size: large;">Sign Up for Exclusive Offers From Oscar's Auto and Smog</h1>
-        <div class="input-group mb-3">
-          <input type="text" class="form-control" placeholder="email address" aria-label="email address"
-            aria-describedby="basic-addon2">
-          <div class="input-group-append">
-            <button class="btn btn-primary" type="button">Submit</button>
-          </div>
-
-        </div>
-        <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone
-          else.</small>
-      </div>
-    </div>
 
     <!-- services/ products section-->
 
     <div class="container-fluid" style="margin-bottom:0">
       Products and Services
       <!-- new rows-->
-      <div class="row" style="margin-bottom:2rem;">
+      <div class="row">
         <div class="col-sm-12">
 
-          <div class="card" style="box-shadow:2px 2px 5px slategray">
+          <div class="card">
             <div class="card-body">
               <div class="row">
                 <div class="col-sm-4"><a
@@ -512,133 +416,7 @@
                     target="_blank" class="site-offer-cta-button">
                     <img
                       src="https://file-optimizer.s3.amazonaws.com/firestone-https://www.firestonecompleteautocare.com/offer/destination-20-08.jpg?1598857961"
-                      alt="$40 Off Set of 4 Firestone Destination LE3 Tires" class="img-fluid">
-                  </a></div>
-                <div class="col-sm-8">
-                  <div class="row">
-                    <div class="col-sm-12">
-                      <h5 class="card-title">Complete Auto Care&nbsp;</h5>
-                    </div>
-                  </div>
-                  <div class="row">
-                    <div class="col-sm-12">
-                      <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-                    </div>
-                  </div>
-                  <div class="row">
-                    <div class="col-sm-6"><button href="#" class="btn btn-danger" value="Learn More">Learn More</button>
-                    </div>
-                    <div class="col-sm-6"><button href="#" class="btn btn-danger" value="Book Now">Book Now</button>
-                    </div>
-
-                  </div>
-
-                </div>
-              </div>
-
-
-
-            </div>
-          </div>
-          </a>
-
-        </div>
-      </div>
-      <div class="row" style="margin-bottom:2rem;">
-        <div class="col-sm-12">
-
-          <div class="card" style="box-shadow:2px 2px 5px slategray">
-            <div class="card-body">
-              <div class="row">
-                <div class="col-sm-4"><a
-                    href="https://www.firestonecompleteautocare.com/offers/offer-detail/destination-20-08"
-                    target="_blank" class="site-offer-cta-button">
-                    <img
-                      src="https://file-optimizer.s3.amazonaws.com/firestone-https://www.firestonecompleteautocare.com/offer/destination-20-08.jpg?1598857961"
-                      alt="$40 Off Set of 4 Firestone Destination LE3 Tires" class="img-fluid">
-                  </a></div>
-                <div class="col-sm-8">
-                  <div class="row">
-                    <div class="col-sm-12">
-                      <h5 class="card-title">Emission Repairs</h5>
-                    </div>
-                  </div>
-                  <div class="row">
-                    <div class="col-sm-12">
-                      <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-                    </div>
-                  </div>
-                  <div class="row">
-                    <div class="col-sm-6"><button href="#" class="btn btn-danger" value="Learn More">Learn More</button>
-                    </div>
-                    <div class="col-sm-6"><button href="#" class="btn btn-danger" value="Book Now">Book Now</button>
-                    </div>
-                  </div>
-                </div>
-              </div>
-
-
-
-            </div>
-          </div>
-          </a>
-
-        </div>
-      </div>
-      <div class="row" style="margin-bottom:2rem;">
-        <div class="col-sm-12">
-
-          <div class="card" style="box-shadow:2px 2px 5px slategray">
-            <div class="card-body">
-              <div class="row">
-                <div class="col-sm-4"><a
-                    href="https://www.firestonecompleteautocare.com/offers/offer-detail/destination-20-08"
-                    target="_blank" class="site-offer-cta-button">
-                    <img
-                      src="https://file-optimizer.s3.amazonaws.com/firestone-https://www.firestonecompleteautocare.com/offer/destination-20-08.jpg?1598857961"
-                      alt="$40 Off Set of 4 Firestone Destination LE3 Tires" class="img-fluid">
-                  </a></div>
-                <div class="col-sm-8">
-                  <div class="row">
-                    <div class="col-sm-12">
-                      <h5 class="card-title">Complete Auto Care&nbsp;</h5>
-                      <h5>Computerized Diagnotics</h5>
-                    </div>
-                  </div>
-                  <div class="row">
-                    <div class="col-sm-12">
-                      <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-                    </div>
-                  </div>
-                  <div class="row">
-                    <div class="col-sm-6"><button href="#" class="btn btn-danger" value="Learn More">Learn More</button>
-                    </div>
-                    <div class="col-sm-6"><button href="#" class="btn btn-danger" value="Book Now">Book Now</button>
-                    </div>
-                  </div>
-                </div>
-              </div>
-
-
-
-            </div>
-          </div>
-          </a>
-
-        </div>
-      </div>
-      <div class="row" style="margin-bottom:2rem;">
-        <div class="col-sm-12">
-
-          <div class="card" style="box-shadow:2px 2px 5px slategray">
-            <div class="card-body">
-              <div class="row">
-                <div class="col-sm-4"><a
-                    href="https://www.firestonecompleteautocare.com/offers/offer-detail/destination-20-08"
-                    target="_blank" class="site-offer-cta-button">
-                    <img
-                      src="https://file-optimizer.s3.amazonaws.com/firestone-https://www.firestonecompleteautocare.com/offer/destination-20-08.jpg?1598857961"
-                      alt="$40 Off Set of 4 Firestone Destination LE3 Tires" class="img-fluid">
+                      alt="$40 Off Set of 4 Firestone Destination LE3 Tires" class="couponimages">
                   </a></div>
                 <div class="col-sm-8">
                   <div class="row">
@@ -652,10 +430,8 @@
                     </div>
                   </div>
                   <div class="row">
-                    <div class="col-sm-6"><button href="#" class="btn btn-danger" value="Learn More">Learn More</button>
-                    </div>
-                    <div class="col-sm-6"><button href="#" class="btn btn-danger" value="Book Now">Book Now</button>
-                    </div>
+                    <div class="col-sm-6"></div>
+                    <div class="col-sm-6"><a href="#" class="btn btn-primary">Go somewhere</a></div>
                   </div>
                 </div>
               </div>
@@ -668,10 +444,10 @@
 
         </div>
       </div>
-      <div class="row" style="margin-bottom:2rem;">
+      <div class="row">
         <div class="col-sm-12">
 
-          <div class="card" style="box-shadow:2px 2px 5px slategray">
+          <div class="card">
             <div class="card-body">
               <div class="row">
                 <div class="col-sm-4"><a
@@ -679,7 +455,7 @@
                     target="_blank" class="site-offer-cta-button">
                     <img
                       src="https://file-optimizer.s3.amazonaws.com/firestone-https://www.firestonecompleteautocare.com/offer/destination-20-08.jpg?1598857961"
-                      alt="$40 Off Set of 4 Firestone Destination LE3 Tires" class="img-fluid">
+                      alt="$40 Off Set of 4 Firestone Destination LE3 Tires" class="couponimages">
                   </a></div>
                 <div class="col-sm-8">
                   <div class="row">
@@ -693,10 +469,8 @@
                     </div>
                   </div>
                   <div class="row">
-                    <div class="col-sm-6"><button href="#" class="btn btn-danger" value="Learn More">Learn More</button>
-                    </div>
-                    <div class="col-sm-6"><button href="#" class="btn btn-danger" value="Book Now">Book Now</button>
-                    </div>
+                    <div class="col-sm-6"></div>
+                    <div class="col-sm-6"><a href="#" class="btn btn-primary">Go somewhere</a></div>
                   </div>
                 </div>
               </div>
@@ -709,10 +483,10 @@
 
         </div>
       </div>
-      <div class="row" style="margin-bottom:2rem;">
+      <div class="row">
         <div class="col-sm-12">
 
-          <div class="card" style="box-shadow:2px 2px 5px slategray">
+          <div class="card">
             <div class="card-body">
               <div class="row">
                 <div class="col-sm-4"><a
@@ -720,7 +494,7 @@
                     target="_blank" class="site-offer-cta-button">
                     <img
                       src="https://file-optimizer.s3.amazonaws.com/firestone-https://www.firestonecompleteautocare.com/offer/destination-20-08.jpg?1598857961"
-                      alt="$40 Off Set of 4 Firestone Destination LE3 Tires" class="img-fluid">
+                      alt="$40 Off Set of 4 Firestone Destination LE3 Tires" class="couponimages">
                   </a></div>
                 <div class="col-sm-8">
                   <div class="row">
@@ -734,10 +508,8 @@
                     </div>
                   </div>
                   <div class="row">
-                    <div class="col-sm-6"><button href="#" class="btn btn-danger" value="Learn More">Learn More</button>
-                    </div>
-                    <div class="col-sm-6"><button href="#" class="btn btn-danger" value="Book Now">Book Now</button>
-                    </div>
+                    <div class="col-sm-6"></div>
+                    <div class="col-sm-6"><a href="#" class="btn btn-primary">Go somewhere</a></div>
                   </div>
                 </div>
               </div>
@@ -750,10 +522,10 @@
 
         </div>
       </div>
-      <div class="row" style="margin-bottom:2rem;">
+      <div class="row">
         <div class="col-sm-12">
 
-          <div class="card" style="box-shadow:2px 2px 5px slategray">
+          <div class="card">
             <div class="card-body">
               <div class="row">
                 <div class="col-sm-4"><a
@@ -761,7 +533,7 @@
                     target="_blank" class="site-offer-cta-button">
                     <img
                       src="https://file-optimizer.s3.amazonaws.com/firestone-https://www.firestonecompleteautocare.com/offer/destination-20-08.jpg?1598857961"
-                      alt="$40 Off Set of 4 Firestone Destination LE3 Tires" class="img-fluid">
+                      alt="$40 Off Set of 4 Firestone Destination LE3 Tires" class="couponimages">
                   </a></div>
                 <div class="col-sm-8">
                   <div class="row">
@@ -775,10 +547,8 @@
                     </div>
                   </div>
                   <div class="row">
-                    <div class="col-sm-6"><button href="#" class="btn btn-danger" value="Learn More">Learn More</button>
-                    </div>
-                    <div class="col-sm-6"><button href="#" class="btn btn-danger" value="Book Now">Book Now</button>
-                    </div>
+                    <div class="col-sm-6"></div>
+                    <div class="col-sm-6"><a href="#" class="btn btn-primary">Go somewhere</a></div>
                   </div>
                 </div>
               </div>
@@ -791,10 +561,10 @@
 
         </div>
       </div>
-      <div class="row" style="margin-bottom:2rem;">
+      <div class="row">
         <div class="col-sm-12">
 
-          <div class="card" style="box-shadow:2px 2px 5px slategray" button>
+          <div class="card">
             <div class="card-body">
               <div class="row">
                 <div class="col-sm-4"><a
@@ -802,7 +572,7 @@
                     target="_blank" class="site-offer-cta-button">
                     <img
                       src="https://file-optimizer.s3.amazonaws.com/firestone-https://www.firestonecompleteautocare.com/offer/destination-20-08.jpg?1598857961"
-                      alt="$40 Off Set of 4 Firestone Destination LE3 Tires" class="img-fluid">
+                      alt="$40 Off Set of 4 Firestone Destination LE3 Tires" class="couponimages">
                   </a></div>
                 <div class="col-sm-8">
                   <div class="row">
@@ -816,10 +586,8 @@
                     </div>
                   </div>
                   <div class="row">
-                    <div class="col-sm-6"><button href="#" class="btn btn-danger" value="Learn More">Learn More</button>
-                    </div>
-                    <div class="col-sm-6"><button href="#" class="btn btn-danger" value="Book Now">Book Now</button>
-                    </div>
+                    <div class="col-sm-6"></div>
+                    <div class="col-sm-6"><a href="#" class="btn btn-primary">Go somewhere</a></div>
                   </div>
                 </div>
               </div>
@@ -832,10 +600,10 @@
 
         </div>
       </div>
-      <div class="row" style="margin-bottom:2rem;">
+      <div class="row">
         <div class="col-sm-12">
 
-          <div class="card" style="box-shadow:2px 2px 5px slategray" button>
+          <div class="card">
             <div class="card-body">
               <div class="row">
                 <div class="col-sm-4"><a
@@ -843,7 +611,7 @@
                     target="_blank" class="site-offer-cta-button">
                     <img
                       src="https://file-optimizer.s3.amazonaws.com/firestone-https://www.firestonecompleteautocare.com/offer/destination-20-08.jpg?1598857961"
-                      alt="$40 Off Set of 4 Firestone Destination LE3 Tires" class="img-fluid">
+                      alt="$40 Off Set of 4 Firestone Destination LE3 Tires" class="couponimages">
                   </a></div>
                 <div class="col-sm-8">
                   <div class="row">
@@ -857,10 +625,8 @@
                     </div>
                   </div>
                   <div class="row">
-                    <div class="col-sm-6"><button href="#" class="btn btn-danger" value="Learn More">Learn More</button>
-                    </div>
-                    <div class="col-sm-6"><button href="#" class="btn btn-danger" value="Book Now">Book Now</button>
-                    </div>
+                    <div class="col-sm-6"></div>
+                    <div class="col-sm-6"><a href="#" class="btn btn-primary">Go somewhere</a></div>
                   </div>
                 </div>
               </div>
@@ -873,10 +639,10 @@
 
         </div>
       </div>
-      <div class="row" style="margin-bottom:2rem;">
+      <div class="row">
         <div class="col-sm-12">
 
-          <div class="card" style="box-shadow:2px 2px 5px slategray">
+          <div class="card">
             <div class="card-body">
               <div class="row">
                 <div class="col-sm-4"><a
@@ -884,7 +650,7 @@
                     target="_blank" class="site-offer-cta-button">
                     <img
                       src="https://file-optimizer.s3.amazonaws.com/firestone-https://www.firestonecompleteautocare.com/offer/destination-20-08.jpg?1598857961"
-                      alt="$40 Off Set of 4 Firestone Destination LE3 Tires" class="img-fluid">
+                      alt="$40 Off Set of 4 Firestone Destination LE3 Tires" class="couponimages">
                   </a></div>
                 <div class="col-sm-8">
                   <div class="row">
@@ -898,10 +664,8 @@
                     </div>
                   </div>
                   <div class="row">
-                    <div class="col-sm-6"><button href="#" class="btn btn-danger" value="Learn More">Learn More</button>
-                    </div>
-                    <div class="col-sm-6"><button href="#" class="btn btn-danger" value="Book Now">Book Now</button>
-                    </div>
+                    <div class="col-sm-6"></div>
+                    <div class="col-sm-6"><a href="#" class="btn btn-primary">Go somewhere</a></div>
                   </div>
                 </div>
               </div>
@@ -914,10 +678,10 @@
 
         </div>
       </div>
-      <div class="row" style="margin-bottom:2rem;">
+      <div class="row">
         <div class="col-sm-12">
 
-          <div class="card" style="box-shadow:2px 2px 5px slategray" button>
+          <div class="card">
             <div class="card-body">
               <div class="row">
                 <div class="col-sm-4"><a
@@ -925,7 +689,7 @@
                     target="_blank" class="site-offer-cta-button">
                     <img
                       src="https://file-optimizer.s3.amazonaws.com/firestone-https://www.firestonecompleteautocare.com/offer/destination-20-08.jpg?1598857961"
-                      alt="$40 Off Set of 4 Firestone Destination LE3 Tires" class="img-fluid">
+                      alt="$40 Off Set of 4 Firestone Destination LE3 Tires" class="couponimages">
                   </a></div>
                 <div class="col-sm-8">
                   <div class="row">
@@ -939,10 +703,8 @@
                     </div>
                   </div>
                   <div class="row">
-                    <div class="col-sm-6"><button href="#" class="btn btn-danger" value="Learn More">Learn More</button>
-                    </div>
-                    <div class="col-sm-6"><button href="#" class="btn btn-danger" value="Book Now">Book Now</button>
-                    </div>
+                    <div class="col-sm-6"></div>
+                    <div class="col-sm-6"><a href="#" class="btn btn-primary">Go somewhere</a></div>
                   </div>
                 </div>
               </div>
@@ -955,10 +717,10 @@
 
         </div>
       </div>
-      <div class="row" style="margin-bottom:2rem;">
+      <div class="row">
         <div class="col-sm-12">
 
-          <div class="card" style="box-shadow:2px 2px 5px slategray">
+          <div class="card">
             <div class="card-body">
               <div class="row">
                 <div class="col-sm-4"><a
@@ -966,7 +728,7 @@
                     target="_blank" class="site-offer-cta-button">
                     <img
                       src="https://file-optimizer.s3.amazonaws.com/firestone-https://www.firestonecompleteautocare.com/offer/destination-20-08.jpg?1598857961"
-                      alt="$40 Off Set of 4 Firestone Destination LE3 Tires" class="img-fluid">
+                      alt="$40 Off Set of 4 Firestone Destination LE3 Tires" class="couponimages">
                   </a></div>
                 <div class="col-sm-8">
                   <div class="row">
@@ -980,11 +742,8 @@
                     </div>
                   </div>
                   <div class="row">
-                    <div class="col-sm-6"><button href="#" class="btn btn-danger" value="Learn More">Learn More</button>
-                    </div>
-                    <div class="col-sm-6"><button href="#" class="btn btn-danger" value="Book Now">Book Now</button>
-                    </div>
-
+                    <div class="col-sm-6"></div>
+                    <div class="col-sm-6"><a href="#" class="btn btn-primary">Go somewhere</a></div>
                   </div>
                 </div>
               </div>
@@ -998,11 +757,24 @@
         </div>
       </div>
 
+      <!-- old rows-->
 
 
 
+      <!-- sign up for exclusive offers-->
 
-
+      <div class="jumbotron jumbotron-fluid">
+        <div class="container">
+          <h1 style="font-size: large;">Sign Up for Exclusive Offers From Oscar's Auto and Smog</h1>
+          <div class="input-group mb-3">
+            <input type="text" class="form-control" placeholder="email address" aria-label="email address"
+              aria-describedby="basic-addon2">
+            <div class="input-group-append">
+              <button class="btn btn-primary" type="button">Submit</button>
+            </div>
+          </div>
+        </div>
+      </div>
 
       <!-- responsive quotes container-->
 
@@ -1096,223 +868,184 @@
 
 
 
-
-
-    </div>
-
-  </div>
-  <div class="container-fluid">
-    <footer id="footer" style="background-color:#343a40;">
-      <div class="container">
-        <div class="row">
-          <div class="col-sm-4">
-            <h6 style="color: white;">TIRES</h6>
-
-            <ul>
-              <li><a href="#" class="footerlink">Blizzak</a></li>
-              <li><a href="#" class="footerlink">Destination</a></li>
-              <li><a href="#" class="footerlink">Toyo</a></li>
-              <li><a href="#" class="footerlink">Escopia</a></li>
-              <li><a href="#" class="footerlink">DriveGuard</a></li>
-              <li><a href="#" class="footerlink">Run-Fiat</a></li>
-              <li><a href="#" class="footerlink">Turanza</a></li>
-              <li><a href="#" class="footerlink">Fuel Fighter</a></li>
-              <li><a href="#" class="footerlink">Primewell</a></li>
-              <li><a href="#" class="footerlink">Potenza</a></li>
-              <li><a href="#" class="footerlink">Winterforce</a></li>
-              <li><a href="#" class="footerlink">Dueler</a></li>
-
-            </ul>
-            <h6 style="color: white;">ABOUT TIRES</h6>
-
-            <ul>
-              <li><a href="#" class="footerlink">Firestone Racing</a></li>
-              <li><a href="#" class="footerlink">How to Check Your Tired Depth</a></li>
-              <li><a href="#" class="footerlink">SUV Tires & Crossover Tires</a></li>
-              <li><a href="#" class="footerlink">Tire Catalog</a></li>
-              <li><a href="#" class="footerlink">Tire Recall Information</a></li>
-              <li><a href="#" class="footerlink">Tire Warranties</a></li>
-
-            </ul>
-
-          </div>
-          <div class="col-sm-8" style="padding:0;margin:0;">
-            <div class="row">
-              <div class="col-sm-6">
-                <h6 style="color: white;">AUTO REPAIR</h6>
-                <ul class="">
-                  <li><a href="#" class="footerlink">Services</a></li>
-                  <li><a href="#" class="footerlink">Engine Repair Services </a></li>
-                  <li><a href="#" class="footerlink">Tire Repair</a></li>
-                  <li><a href="#" class="footerlink">Steering and Suspension</a></li>
-                  <li><a href="#" class="footerlink">Alignment</a></li>
-                  <li><a href="#" class="footerlink">Brakes</a></li>
-
-                </ul>
-                <h6 style="color: white;">AUTO MAINTENANCES</h6>
-                <ul class="">
-                  <li><a href="#" class="footerlink">AC Service</a></li>
-                  <li><a href="#" class="footerlink">Batteries </a></li>
-                  <li><a href="#" class="footerlink">Tune-up</a></li>
-                  <li><a href="#" class="footerlink">Drivetrain</a></li>
-                  <li><a href="#" class="footerlink">Vehicle Inspection</a></li>
-                  <li><a href="#" class="footerlink">Oil</a></li>
-                  <li><a href="#" class="footerlink">Radiator</a></li>
-                  <li><a href="#" class="footerlink">Transmission</a></li>
-
-                </ul>
-              </div>
-              <div class="col-sm-6">
-                <h6 style="color: white;">Oscar's Auto Care & Smog Services</h6>
-                <ul>
-                  <li><a href="#" class="footerlink">Who We Are</a></li>
-                  <li><a href="#" class="footerlink">Contact Us</a></li>
-                  <li><a href="" class="footerlink">Schedule Appointment</a></li>
-                  <li><a href="" class="footerlink">FAQS</a></li>
-                  <li><a href="" class="footerlink">Offers and Rebates</a></li>
-                  <li><a href="" class="footerlink">Auto Care</a></li>
-                  <li><a href="" class="footerlink">Blog</a></li>
-                </ul>
-                <h6 style="color: white;">Articles</h6>
-                <ul>
-                  <li><a href="#" class="footerlink">Top Articles</a></li>
-                  <li><a href="#" class="footerlink">Tires</a></li>
-                  <li><a href="" class="footerlink">Brakes</a></li>
-                  <li><a href="" class="footerlink">Batteries</a></li>
-                  <li><a href="" class="footerlink">Alignment</a></li>
-                  <li><a href="" class="footerlink">Oil Change</a></li>
-                  <li><a href="" class="footerlink">Maintenance</a></li>
-                </ul>
-
-              </div>
-            </div>
-
-            <div class="row">
+      <footer id="footer" style="background-color:#343a40;">
+        <div class="container">
+          <div class="row">
+            <div class="col-sm">
+              <h6 style="color: white;">TIRES</h6>
 
               <ul>
-                <h6 style="color: white;">Get Coupons</h6>
+                <li><a href="#" class="footerlink">Blizzak</a></li>
+                <li><a href="#" class="footerlink">Destination</a></li>
+                <li><a href="#" class="footerlink">Toyo</a></li>
+                <li><a href="#" class="footerlink">Escopia</a></li>
+                <li><a href="#" class="footerlink">DriveGuard</a></li>
+                <li><a href="#" class="footerlink">Run-Fiat</a></li>
+                <li><a href="#" class="footerlink">Turanza</a></li>
+                <li><a href="#" class="footerlink">Fuel Fighter</a></li>
+                <li><a href="#" class="footerlink">Primewell</a></li>
+                <li><a href="#" class="footerlink">Potenza</a></li>
+                <li><a href="#" class="footerlink">Winterforce</a></li>
+                <li><a href="#" class="footerlink">Dueler</a></li>
+
+              </ul>
+              <h6 style="color: white;">ABOUT TIRES</h6>
+
+              <ul>
+                <li><a href="#" class="footerlink">Firestone Racing</a></li>
+                <li><a href="#" class="footerlink">How to Check Your Tired Depth</a></li>
+                <li><a href="#" class="footerlink">SUV Tires & Crossover Tires</a></li>
+                <li><a href="#" class="footerlink">Tire Catalog</a></li>
+                <li><a href="#" class="footerlink">Tire Recall Information</a></li>
+                <li><a href="#" class="footerlink">Tire Warranties</a></li>
+
+              </ul>
+
+            </div>
+            <div class="col-sm">
+              <h6 style="color: white;">AUTO REPAIR</h6>
+              <ul class="">
+                <li><a href="#" class="footerlink">Services</a></li>
+                <li><a href="#" class="footerlink">Engine Repair Services </a></li>
+                <li><a href="#" class="footerlink">Tire Repair</a></li>
+                <li><a href="#" class="footerlink">Steering and Suspension</a></li>
+                <li><a href="#" class="footerlink">Alignment</a></li>
+                <li><a href="#" class="footerlink">Brakes</a></li>
+
+              </ul>
+            </div>
+            <div class="col-sm">
+              <h6 style="color: white;">AUTO MAINTENANCES</h6>
+              <ul class="">
+                <li><a href="#" class="footerlink">AC Service</a></li>
+                <li><a href="#" class="footerlink">Batteries </a></li>
+                <li><a href="#" class="footerlink">Tune-up</a></li>
+                <li><a href="#" class="footerlink">Drivetrain</a></li>
+                <li><a href="#" class="footerlink">Vehicle Inspection</a></li>
+                <li><a href="#" class="footerlink">Oil</a></li>
+                <li><a href="#" class="footerlink">Radiator</a></li>
+                <li><a href="#" class="footerlink">Transmission</a></li>
+
+              </ul>
+            </div>
+            <div class="col-sm">
+              <h6 style="color: white;">Oscar's Auto Care & Smog Services</h6>
+              <ul>
+                <li><a href="#" class="footerlink">Who We Are</a></li>
+                <li><a href="#" class="footerlink">Contact Us</a></li>
+                <li><a href="" class="footerlink">Schedule Appointment</a></li>
+                <li><a href="" class="footerlink">FAQS</a></li>
+                <li><a href="" class="footerlink">Offers and Rebates</a></li>
+                <li><a href="" class="footerlink">Auto Care</a></li>
+                <li><a href="" class="footerlink">Blog</a></li>
+              </ul>
+              <h6 style="color: white;">Articles</h6>
+              <ul>
+                <li><a href="#" class="footerlink">Top Articles</a></li>
+                <li><a href="#" class="footerlink">Tires</a></li>
+                <li><a href="" class="footerlink">Brakes</a></li>
+                <li><a href="" class="footerlink">Batteries</a></li>
+                <li><a href="" class="footerlink">Alignment</a></li>
+                <li><a href="" class="footerlink">Oil Change</a></li>
+                <li><a href="" class="footerlink">Maintenance</a></li>
+              </ul>
+              <h6 style="color: white;">Get Coupons</h6>
+              <ul>
+
 
                 <li>
                   <div class="input-group mb-3">
-
                     <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"
                       placeholder="Enter email">
                     <div class="input-group-append">
                       <button class="btn btn-primary" type="submit">></button>
                     </div>
-
+                    <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone
+                      else.</small>
                   </div>
-                  <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone
-                    else.</small>
+
                 </li>
 
               </ul>
             </div>
           </div>
+        </div>
+      </footer>
+      <!-- Icons -->
+      <footer id="footer">
+
+        <div>
+
+          <ul class="menu">
+            <li><a>Site Map</a></li>
+            <li><a>Terms of Use</a></li>
+            <li><a>Privacy Policy</a></li>
+          </ul>
+
+        </div>
+
+        <div style="display:flex;flex-direction:row;align-self:center;">
+
+          <div class="row">
+
+            <div class="col-sm-3">
+              <ul class="icons">
+                <li>
+                  <a href="#" class="icon brands fab fa-twitter footerlink"><span class="label"></span></a>
+                </li>
+                <li>
+                  <a href="#" class="icon brands fab fa-facebook-f footerlink"><span class="label"></span></a>
+                </li>
+                <li>
+                  <a href="#" class="icon brands fab fa-instagram footerlink"><span class="label"></span></a>
+                </li>
+                <li>
+                  <a href="#" class="icon brands fab fa-linkedin-in footerlink"><span class="label"></span></a>
+                </li>
+
+                <li>
+                  <a href="#" class="icon brands fab fa-pinterest footerlink"><span class="label"></span></a>
+                </li>
+              </ul>
+
+            </div>
+
+            <div class="col-sm-9">
+
+              <!-- Menu -->
+              <ul class="">
+                <li>&copy; Oscar's Auto Care & Smog Services</li>
+                <li>Designed by <a href="https://omnitek.dev">Omnitek.Dev</a></li>
+              </ul>
+            </div>
+
+          </div>
+
+
+
+
 
 
 
         </div>
-      </div>
-    </footer>
-    <!-- Icons -->
-    <footer id="footer">
 
-      <div>
+      </footer>
 
-        <ul class="menu">
-          <li><a>Site Map</a></li>
-          <li><a>Terms of Use</a></li>
-          <li><a>Privacy Policy</a></li>
-        </ul>
-
-      </div>
-
-      <div style="display:flex;flex-direction:row;align-self:center;">
-
-        <div class="row">
-
-          <div class="col-sm-3">
-            <ul class="icons">
-              <li>
-                <a href="#" class="icon brands fab fa-twitter footerlink"><span class="label"></span></a>
-              </li>
-              <li>
-                <a href="#" class="icon brands fab fa-facebook-f footerlink"><span class="label"></span></a>
-              </li>
-              <li>
-                <a href="#" class="icon brands fab fa-instagram footerlink"><span class="label"></span></a>
-              </li>
-              <li>
-                <a href="#" class="icon brands fab fa-linkedin-in footerlink"><span class="label"></span></a>
-              </li>
-
-              <li>
-                <a href="#" class="icon brands fab fa-pinterest footerlink"><span class="label"></span></a>
-              </li>
-            </ul>
-
-          </div>
-
-          <div class="col-sm-9">
-
-            <!-- Menu -->
-            <ul class="">
-              <li>&copy; Oscar's Auto Care & Smog Services</li>
-              <li>Designed by <a href="https://omnitek.dev">Omnitek.Dev</a></li>
-            </ul>
-          </div>
-
-        </div>
+    </div>
 
 
 
 
 
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 
-
-      </div>
-
-    </footer>
-
-  </div>
-
-
-
-
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
-  <script src="js/popper.min.js"></script>
-  <script src="/js/main.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.4.2/gsap.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.4.2/ScrollTrigger.min.js"></script>
-
-
-  <!-- jQuery Custom Scroller CDN -->
-  <script
-    src="https://cdnjs.cloudflare.com/ajax/libs/malihu-custom-scrollbar-plugin/3.1.5/jquery.mCustomScrollbar.concat.min.js"></script>
-
-  <script type="text/javascript">
-    $(document).ready(function () {
-      $("#sidebar1").mCustomScrollbar({
-        theme: "minimal"
-      });
-
-      $('#dismiss1, .overlay1').on('click', function () {
-        $('#sidebar1').removeClass('active');
-        $('.overlay1').removeClass('active');
-      });
-
-      $('#sidebarCollapse').on('click', function () {
-        $('#sidebar1').addClass('active');
-        $('.overlay1').addClass('active');
-        $('.collapse.in').toggleClass('in');
-        $('a[aria-expanded=true]').attr('aria-expanded', 'false');
-      });
-    });
-  </script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="/js/main.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.4.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.4.2/ScrollTrigger.min.js"></script>
 
 </body>
+
 
 </html>
