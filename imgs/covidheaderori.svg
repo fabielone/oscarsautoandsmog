@@ -3,12 +3,17 @@
 <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
 	 viewBox="0 0 649.2 94.7" style="enable-background:new 0 0 649.2 94.7;" xml:space="preserve">
 <style type="text/css">
-	.st0{fill:#FF0000;}
-	.st1{font-family:'VAGRundschriftD-Lig';}
-	.st2{font-size:72.789px;}
-	.st3{font-size:24.1668px;}
+	.st0{enable-background:new    ;}
+	.st1{fill:#FF0000;}
+	.st2{font-family:'P22UndergroundMedium';}
+	.st3{font-size:72.789px;}
+	.st4{font-family:'VAGRundschriftD-Lig';}
+	.st5{font-family:'P22Underground-DmP';}
+	.st6{font-size:24.1668px;}
+	.st7{fill:none;}
 </style>
-<text transform="matrix(1 0 0 1 12 73.7078)" class="st0 st1 st2">COVID 19:</text>
-<text transform="matrix(1 0 0 1 360.6875 41.9592)" class="st0 st1 st3">Offering a Safer Service</text>
-<text transform="matrix(1 0 0 1 360.6875 70.9592)" class="st0 st1 st3">To All Our Customers</text>
+<text transform="matrix(1 0 0 1 12 73.7078)" class="st0"><tspan x="0" y="0" class="st1 st2 st3">COVID 19</tspan><tspan x="310.1" y="0" class="st1 st4 st3">:</tspan></text>
+<text transform="matrix(1 0 0 1 360.6875 41.9592)" class="st1 st5 st6">Offering a Safer Service</text>
+<text transform="matrix(1 0 0 1 360.6875 70.9592)" class="st1 st5 st6">To All Our Customers</text>
+<rect class="st7" width="649.2" height="94.7"/>
 </svg>

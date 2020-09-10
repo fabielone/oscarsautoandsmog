@@ -169,8 +169,12 @@ a.article:hover {
   color: white !important;
 }
 
+.coupons {
+  border: 5px dashed red;
+}
+
 body {
-  font: 100% Helvitica, sans-serif;
+  font: 100% p22-underground, sans-serif;
 }
 
 #footer {
@@ -270,7 +274,7 @@ ul.icons li {
 
 .item blockquote p:before {
   content: "\f10d";
-  font-family: 'Fontawesome';
+  font-family: p22-underground, sans-serif;
   float: left;
   margin-right: 10px;
 }

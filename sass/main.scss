@@ -2,6 +2,7 @@
 @import './base/colors';
 @import './components/header';
 @import './base/page';
+@import './components/coupon';
 
 @import url("https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,900");
 
@@ -120,10 +121,11 @@ ul.menu li {
 
 .item blockquote p:before {
     content: "\f10d";
-    font-family: 'Fontawesome';
+    font-family: p22-underground, sans-serif;
     float: left;
     margin-right: 10px;
 }
+
 
 
 
