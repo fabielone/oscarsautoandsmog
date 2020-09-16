@@ -90,7 +90,7 @@
 
       <ul class="list-unstyled CTAs">
         <li>
-          <a href="#" class="download">Book Now</a>
+          <a href="#" class="download" id="dismiss2" data-toggle="modal" data-target="#exampleModalCenter">Book Now</a>
         </li>
         <li>
           <a href="#" class="article">Call Us</a>
@@ -117,11 +117,95 @@
           </button>
         </div>
         <div class="modal-body">
-          ...
+          <form class="needs-validation" id="test-form" validate>
+            <div class="form-row">
+              <div class="col-md-6 mb-3">
+                <label for="validationCustom01">First name</label>
+                <input type="text" class="form-control" id="validationCustom01" name="firstnamefield"
+                  placeholder="First name" required>
+                <div class="valid-feedback">
+                  Looks good!
+                </div>
+              </div>
+              <div class="col-md-6 mb-3">
+                <label for="validationCustom02">Last name</label>
+                <input type="text" class="form-control" id="validationCustom02" name="lastnamefield"
+                  placeholder="Last name">
+                <div class="valid-feedback">
+                  Looks good!
+                </div>
+              </div>
+
+            </div>
+            <div class="form-row">
+              <div class="col-md-6 mb-6">
+                <label for="validationCustomUsername">Email</label>
+                <div class="input-group">
+
+                  <input type="text" class="form-control" id="validationCustomUsername" name="emailfield"
+                    placeholder="Email" aria-describedby="inputGroupPrepend" required>
+
+                  <div class="invalid-feedback">
+                    Please enter email.
+                  </div>
+                </div>
+                <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone
+                  else.</small>
+              </div>
+              <div class="col-md-6 mb-6">
+                <label for="validationCustomUsername">Phone #</label>
+                <div class="input-group">
+
+                  <input type="text" class="form-control" id="validationCustomUsername" name="numberfield"
+                    placeholder="Phone #" aria-describedby="inputGroupPrepend">
+
+
+                  <div class="invalid-feedback">
+                    Please enter phone number.
+                  </div>
+                </div>
+                <small id="emailHelp" class="form-text text-muted">We'll never share your phone number with anyone
+                  else.</small>
+              </div>
+            </div>
+            <div class="form-row">
+              <div class="col-md-6 mb-3">
+                <label for="validationCustom03">City</label>
+                <input type="text" class="form-control" id="validationCustom03" name="cityfield" placeholder="City"
+                  required>
+                <div class="invalid-feedback">
+                  Please provide a valid city.
+                </div>
+              </div>
+              <div class="col-md-3 mb-3">
+                <label for="validationCustom04">State</label>
+                <input type="text" class="form-control" id="validationCustom04" name="statefield" placeholder="State"
+                  required>
+                <div class="invalid-feedback">
+                  Please provide a valid state.
+                </div>
+              </div>
+              <div class="col-md-3 mb-3">
+                <label for="validationCustom05">Zip</label>
+                <input type="text" class="form-control" id="validationCustom05" name="zipcodefield" placeholder="Zip"
+                  required>
+                <div class="invalid-feedback">
+                  Please provide a valid zip.
+                </div>
+              </div>
+            </div>
+
+
+            <div class="form-group">
+              <label for="exampleFormControlTextarea1">Comments</label>
+              <textarea class="form-control" id="exampleFormControlTextarea1" rows="2"></textarea>
+            </div>
+
+          </form>
         </div>
         <div class="modal-footer">
           <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-          <button type="button" class="btn btn-primary">Save changes</button>
+          <button type="button" class="btn btn-primary" id="submit-form">Book Appointment</button>
         </div>
       </div>
     </div>
@@ -219,7 +303,8 @@
             <strong> Colton, CA 92324</strong><br>
             <a href="https://g.page/oscars-auto-smog?share">Get Directions </a></p>
           <h3 class="text-center"><a href="tel:9093702817"><strong> (909) 370-2817&nbsp;</strong></a></h3>
-          <button type="button" class="btn btn-danger align-content-center" style="text-align: center;">SCHEDULE AN<br>
+          <button type="button" class="btn btn-danger align-content-center" style="text-align: center;"
+            data-toggle="modal" data-target="#exampleModalCenter">SCHEDULE AN<br>
             APPOINTMENT
           </button>
           <p class="text-center"><strong>Hours</strong><br>Mon-Fri: 8:00am-5:00pm<br> Sat: 8:00am-2:00pm</p>
@@ -1378,6 +1463,11 @@
         $('.overlay1').removeClass('active');
       });
 
+      $('#dismiss2, .overlay1').on('click', function () {
+        $('#sidebar1').removeClass('active');
+        $('.overlay1').removeClass('active');
+      });
+
       $('#sidebarCollapse').on('click', function () {
         $('#sidebar1').addClass('active');
         $('.overlay1').addClass('active');
@@ -1385,6 +1475,51 @@
         $('a[aria-expanded=true]').attr('aria-expanded', 'false');
       });
     });
+  </script>
+
+  <script src="./js/jquery.serialize-object.min.js"></script>
+
+
+  <script>
+
+
+    var $form = $('form#test-form'),
+      url = 'https://script.google.com/macros/s/AKfycbxHk0Tew1_HDgk5pIwdJkfKCmqdA3TaTOG2iDMTwkZB28a3YAk/exec'
+
+    $('#submit-form').on('click', function (e) {
+      e.preventDefault();
+      var jqxhr = $.ajax({
+        url: url,
+        method: "GET",
+        dataType: "json",
+        data: $form.serializeObject()
+      }).success(
+        // do something
+
+      );
+    })
+
+      //form scripts
+      // Example starter JavaScript for disabling form submissions if there are invalid fields
+      (function () {
+        'use strict';
+        window.addEventListener('load', function () {
+          // Fetch all the forms we want to apply custom Bootstrap validation styles to
+          var forms = document.getElementsByClassName('needs-validation');
+          // Loop over them and prevent submission
+          var validation = Array.prototype.filter.call(forms, function (form) {
+            form.addEventListener('submit', function (event) {
+              if (form.checkValidity() === false) {
+                event.preventDefault();
+                event.stopPropagation();
+              }
+              form.classList.add('was-validated');
+            }, false);
+          });
+        }, false);
+      })();
+
+
   </script>
 
 </body>
